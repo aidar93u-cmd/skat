@@ -1159,6 +1159,7 @@ h4,
 	line-height: 115%;
 	letter-spacing: -1px;
 	text-transform: uppercase;
+	width: calc(100% - 76px);
 }
 
 .advantage-text {
@@ -1726,6 +1727,9 @@ h4,
 		max-width: 270px;
 		font-size: var(--fs-14);
 	}
+	.advantages-swiper .swiper-wrapper {
+		gap: 40px;
+	}
 }
 
 /* ----------------------------------------
@@ -1761,6 +1765,13 @@ h4,
 		left: 32px;
 		right: 32px;
 		gap: 24px;
+	}
+
+	.advantages-swiper .swiper-slide {
+		flex: none;
+		min-width: 0;
+		height: auto;
+		width: 48%;
 	}
 	.hero-sidebar-item {
 		padding: 24px;
@@ -1957,6 +1968,7 @@ h4,
 		width: 100%;
 		justify-content: space-between;
 		gap: 30px;
+		flex-wrap: wrap;
 	}
 
 	.company-slide-bottom {
@@ -2135,6 +2147,7 @@ h4,
 	}
 	.advantages-swiper .swiper-wrapper {
 		gap: 0;
+		flex-wrap: nowrap;
 	}
 	.advantages-swiper .swiper-slide {
 		flex: none;
@@ -2546,6 +2559,7 @@ h4,
 		font-size: var(--fs-h3);
 		margin-top: 10px;
 		max-width: 100%;
+		width: 100%;
 	}
 	.advantage-item {
 		padding: 5px 0;
