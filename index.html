@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SKAT</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container container-lg">
+				<div class="row header-row">
+					<!-- Logo -->
+					<div class="col-5 col-md-2 col-lg-2 col-xl-3 header-row__logo">
+						<a href="#" class="header-logo">
+							<img
+								src="images/logo-skat.svg"
+								alt="СКАТ"
+								width="131"
+								height="32"
+							/>
+						</a>
+					</div>
+					<!-- Menu -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6 header-row__nav"></div>
+					<!-- Phone and Button -->
+					<div class="col-7 col-md-4 col-lg-4 col-xl-3 header-row__right">
+						<div class="header-right">
+							<button
+								type="button"
+								class="burger-btn"
+								aria-label="Открыть меню"
+							>
+								<span class="burger-btn__line burger-btn__line--top"></span>
+								<span class="burger-btn__line burger-btn__line--bottom"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Мобильное меню (выезжает слева) -->
+			<div
+				class="mobile-menu-overlay"
+				id="mobile-menu-overlay"
+				aria-hidden="true"
+			></div>
+			<div class="mobile-menu-panel" id="mobile-menu-panel" aria-hidden="true">
+				<nav class="menu">
+					<a href="#" class="menu-item menu-item-selected">
+						<span class="menu-icon">
+							<img
+								src="images/icon-menu-grid.svg"
+								alt=""
+								width="10"
+								height="10"
+							/>
+						</span>
+						продукция
+					</a>
+					<a href="#" class="menu-item">проекты</a>
+					<a href="#" class="menu-item">о компании</a>
+					<a href="#" class="menu-item">документация</a>
+					<a href="#" class="menu-item">Контакты</a>
+				</nav>
+				<a href="#" class="btn btn-primary">
+					Оставить заявку
+					<img
+						src="images/icon-arrow-double.svg"
+						alt=""
+						width="36"
+						height="36"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-two-column" data-aos="fade-up">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-12">
+						<div class="hero-two-column-title h3">
+							выберите интересующее вас направление
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div
+							class="hero-main hero-main-column corner-tl-50 corner-br-50"
+							style="background-image: url('images/hero01.jpg')"
+						>
+							<div class="hero-content-top-left">
+								<h1 class="h2" data-aos="fade-up" data-aos-delay="200">
+									Арматура для СИП
+								</h1>
+								<h3
+									class="text-22-uppercase"
+									data-aos="fade-up"
+									data-aos-delay="400"
+								>
+									0,4 кВт и 6-35 кВт
+								</h3>
+							</div>
+							<div class="hero-content-top-left">
+								<h1 class="h2" data-aos="fade-up" data-aos-delay="600">
+									Кабельные муфты
+								</h1>
+								<h3
+									class="text-22-uppercase"
+									data-aos="fade-up"
+									data-aos-delay="800"
+								>
+									0,4-35 кВт
+								</h3>
+							</div>
+
+							<div class="btn-hero-column-overlay">
+								<a href="index1.html" class="btn btn-primary btn-hero-column">
+									Перейти
+									<img
+										src="images/icon-arrow-double.svg"
+										alt="Перейти"
+										width="36"
+										height="36"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div
+							class="hero-main hero-main-column corner-tl-50 corner-br-50"
+							style="background-image: url('images/hero02.jpg')"
+						>
+							<div class="hero-content-top-left">
+								<h1 class="h2" data-aos="fade-up" data-aos-delay="200">
+									Кабельная арматура
+								</h1>
+								<h3
+									class="text-22-uppercase"
+									data-aos="fade-up"
+									data-aos-delay="400"
+								>
+									110-500 кВТ
+								</h3>
+							</div>
+							<div class="btn-hero-column-overlay">
+								<a href="index2.html" class="btn btn-primary btn-hero-column">
+									Перейти
+									<img
+										src="images/icon-arrow-double.svg"
+										alt="Перейти"
+										width="36"
+										height="36"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container container-lg">
+				<div class="row row-center-align">
+					<div class="col-12 col-md-4">
+						<p class="footer-left text-14">© АО «СКАТ» 2026</p>
+					</div>
+					<div class="col-12 col-md-4">
+						<a href="#" class="footer-center text-14"
+							>Политика конфиденциальности</a
+						>
+					</div>
+					<div class="col-12 col-md-4">
+						<p class="footer-right">
+							<a
+								href="https://markweber.ru"
+								target="_blank"
+								class="footer-right-link text-14"
+								>Разработка сайта — Mark Weber
+								<img
+									src="images/markweb.svg"
+									alt="markweber"
+									width="30"
+									height="45"
+								/>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SKAT</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container container-lg">
+				<div class="row header-row">
+					<!-- Logo -->
+					<div class="col-5 col-md-2 col-lg-2 col-xl-3 header-row__logo">
+						<a href="#" class="header-logo">
+							<img
+								src="images/logo-skat.svg"
+								alt="СКАТ"
+								width="131"
+								height="32"
+							/>
+						</a>
+					</div>
+					<!-- Menu (desktop) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6 header-row__nav">
+						<nav class="menu">
+							<a href="#" class="menu-item menu-item-selected">
+								<span class="menu-icon">
+									<img
+										src="images/icon-menu-grid.svg"
+										alt=""
+										width="10"
+										height="10"
+									/>
+								</span>
+								продукция
+							</a>
+							<a href="#" class="menu-item"> проекты </a>
+							<a href="#" class="menu-item"> о компании </a>
+							<a href="#" class="menu-item"> документация </a>
+							<a href="#" class="menu-item"> Контакты </a>
+						</nav>
+					</div>
+					<!-- Phone, Burger, Button -->
+					<div class="col-7 col-md-4 col-lg-4 col-xl-3 header-row__right">
+						<div class="header-right">
+							<a href="tel:+78002505999" class="phone">8 800 250 59 99</a>
+							<button
+								type="button"
+								class="burger-btn"
+								aria-label="Открыть меню"
+							>
+								<span class="burger-btn__line burger-btn__line--top"></span>
+								<span class="burger-btn__line burger-btn__line--bottom"></span>
+							</button>
+							<button class="btn btn-primary">
+								Оставить заявку
+								<img
+									src="images/icon-arrow-double.svg"
+									alt="Подробнее"
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Мобильное меню (выезжает слева) -->
+			<div
+				class="mobile-menu-overlay"
+				id="mobile-menu-overlay"
+				aria-hidden="true"
+			></div>
+			<div class="mobile-menu-panel" id="mobile-menu-panel" aria-hidden="true">
+				<nav class="menu">
+					<a href="#" class="menu-item menu-item-selected">
+						<span class="menu-icon">
+							<img
+								src="images/icon-menu-grid.svg"
+								alt=""
+								width="10"
+								height="10"
+							/>
+						</span>
+						продукция
+					</a>
+					<a href="#" class="menu-item">проекты</a>
+					<a href="#" class="menu-item">о компании</a>
+					<a href="#" class="menu-item">документация</a>
+					<a href="#" class="menu-item">Контакты</a>
+				</nav>
+				<a href="#" class="btn btn-primary">
+					Оставить заявку
+					<img
+						src="images/icon-arrow-double.svg"
+						alt=""
+						width="36"
+						height="36"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero" data-aos="fade-up">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-8 col-lg-9 col-xl-9">
+						<div
+							class="hero-main corner-tl-30 corner-br-30"
+							style="background-image: url('images/hero1.jpg')"
+						>
+							<div class="hero-content-top-left">
+								<h1 data-aos="fade-up" data-aos-delay="200">Арматура</h1>
+								<h1 data-aos="fade-up" data-aos-delay="400">для СИП</h1>
+								<h3 data-aos="fade-up" data-aos-delay="600">
+									0,4 кВт и 6-35 кВт
+								</h3>
+							</div>
+							<div class="hero-content-bottom-right">
+								<div
+									class="hero-content-bottom-right-btn"
+									data-aos="fade-up"
+									data-aos-delay="800"
+								>
+									<a href="#" class="btn btn-primary">
+										Перейти в каталог
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+								<div class="hero-bottom-titles">
+									<h3 data-aos="fade-up" data-aos-delay="800">0,4-35 кВт</h3>
+									<h1 data-aos="fade-up" data-aos-delay="1000">Кабельные</h1>
+									<h1 data-aos="fade-up" data-aos-delay="1200">муфты</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 1/4 - Sidebar List -->
+					<div class="col-12 col-md-4 col-lg-3 col-xl-3">
+						<div class="hero-sidebar corner-tl-30 corner-br-30">
+							<!-- Projects + Documents (на мобилке пополам) -->
+							<div class="hero-sidebar__row">
+								<div
+									class="hero-sidebar__block hero-sidebar__block--projects"
+									data-aos-delay="200"
+									data-aos="fade-up"
+								>
+									<div class="hero-sidebar-item">
+										<h3>проекты</h3>
+										<div class="hero-sidebar-row">
+											<span class="text-14">42 <span>проекта</span></span>
+											<button class="btn-icon">
+												<img
+													src="images/icon-arrow-double-white.svg"
+													alt="Открыть"
+													width="10"
+													height="8"
+												/>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div
+									class="hero-sidebar__block hero-sidebar__block--documents"
+									data-aos-delay="400"
+									data-aos="fade-up"
+								>
+									<div class="hero-sidebar-item">
+										<h3>документация</h3>
+										<div class="hero-sidebar-row">
+											<span class="text-14">10 <span>документов</span></span>
+											<button class="btn-icon">
+												<img
+													src="images/icon-arrow-double-white.svg"
+													alt="Открыть"
+													width="10"
+													height="8"
+												/>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Block 3 - Contacts -->
+							<div
+								class="hero-sidebar__block hero-sidebar__block--contacts"
+								data-aos-delay="600"
+								data-aos="fade-up"
+							>
+								<div class="hero-sidebar-item">
+									<h3>контакты</h3>
+									<div class="hero-sidebar-row">
+										<div class="hero-sidebar-contacts">
+											<span class="text-18">8 800 250 59 99</span>
+											<span class="text-18">info@scat.ru</span>
+										</div>
+										<button class="btn-icon">
+											<img
+												src="images/icon-arrow-double-white.svg"
+												alt="Открыть"
+												width="10"
+												height="8"
+											/>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advantages Section -->
+		<section class="advantages" data-aos="fade-up">
+			<div class="container container-lg">
+				<div class="advantages-wrapper advantages-swiper swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div
+								class="advantage-item"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								<div class="advantage-content-box">
+									<div class="advantage-icon-box corner-tl-10 corner-br-10">
+										<img
+											src="images/icon-document.svg"
+											alt=""
+											width="20"
+											height="20"
+										/>
+									</div>
+									<h3 class="advantage-title">СЕРТИФИКАЦИЯ И ДОКУМЕНТЫ</h3>
+								</div>
+								<p class="advantage-text">
+									Наша продукция имеет все виды сертификатов и документации
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div
+								class="advantage-item"
+								data-aos="fade-up"
+								data-aos-delay="400"
+							>
+								<div class="advantage-content-box">
+									<div class="advantage-icon-box corner-tl-10 corner-br-10">
+										<img
+											src="images/icon-shield.svg"
+											alt=""
+											width="18"
+											height="20"
+										/>
+									</div>
+									<h3 class="advantage-title">ГАРАНТИЯ КАЧЕСТВА</h3>
+								</div>
+								<p class="advantage-text">
+									Строгий контроль качества и работа только с надежными
+									партнерами
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div
+								class="advantage-item"
+								data-aos="fade-up"
+								data-aos-delay="600"
+							>
+								<div class="advantage-content-box">
+									<div class="advantage-icon-box corner-tl-10 corner-br-10">
+										<img
+											src="images/icon-truck.svg"
+											alt=""
+											width="24"
+											height="24"
+										/>
+									</div>
+									<h3 class="advantage-title">ПРЯМЫЕ ПОСТАВКИ</h3>
+								</div>
+								<p class="advantage-text">
+									Индивидуальный подход и прямые поставки с завода на территорию
+									РФ
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div
+								class="advantage-item"
+								data-aos="fade-up"
+								data-aos-delay="800"
+							>
+								<div class="advantage-content-box">
+									<div class="advantage-icon-box corner-tl-10 corner-br-10">
+										<img
+											src="images/icon-factory.svg"
+											alt=""
+											width="24"
+											height="24"
+										/>
+									</div>
+									<h3 class="advantage-title">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
+								</div>
+								<p class="advantage-text">
+									Являемся производителем кабельных муфт для любых типов кабелей
+									и арматуры
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Catalog Section -->
+		<section class="catalog-section">
+			<div class="container container-lg">
+				<div class="row catalog-row">
+					<!-- Left static column -->
+					<div class="col-12 col-md-3 col-lg-3 col-xl-3">
+						<div class="catalog-left">
+							<div class="catalog-left-top">
+								<h3
+									class="catalog-title"
+									data-aos="fade-up"
+									data-aos-delay="200"
+								>
+									КАТАЛОГ<br />ПРОДУКЦИИ
+								</h3>
+								<div
+									class="catalog-nav"
+									data-aos="fade-up"
+									data-aos-delay="400"
+								>
+									<div class="swiper-button-prev">
+										<img
+											src="images/icon-arrow-left.svg"
+											alt="Назад"
+											width="14"
+											height="12"
+										/>
+									</div>
+									<div class="swiper-button-next">
+										<img
+											src="images/icon-arrow-right.svg"
+											alt="Вперёд"
+											width="14"
+											height="12"
+										/>
+									</div>
+								</div>
+							</div>
+							<div
+								class="catalog-link-btn catalog-link-btn--pc"
+								data-aos="fade-up"
+								data-aos-delay="600"
+							>
+								<a href="#" class="btn btn-primary">
+									Перейти в каталог
+									<img
+										src="images/icon-arrow-double.svg"
+										alt="Перейти"
+										width="36"
+										height="36"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Right slider column -->
+					<div class="col-12 col-md-9 col-lg-9 col-xl-9">
+						<div
+							class="swiper catalog-swiper"
+							data-aos="fade-up"
+							data-aos-delay="400"
+						>
+							<div class="swiper-wrapper">
+								<!-- Slide 1 -->
+								<div class="swiper-slide">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">КАБЕЛЬНАЯ<br />МУФТА</h3>
+										<div class="catalog-card-image">
+											<img src="images/image3.png" alt="Кабельная муфта" />
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">5 позиций</span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Slide 2 -->
+								<div class="swiper-slide">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">ОТВЕТВИТЕЛЬНАЯ АРМАТУРА</h3>
+										<div class="catalog-card-image">
+											<img
+												src="images/image1.png"
+												alt="Ответвительная арматура"
+											/>
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">8 позиций</span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Slide 3 -->
+								<div class="swiper-slide">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">
+											УСТРОЙСТВА И ПРИСПОСОБЛЕНИЯ ДЛЯ ЗАЩИТЫ ВЛИ
+										</h3>
+										<div class="catalog-card-image">
+											<img
+												src="images/image2.png"
+												alt="Устройства и приспособления для защиты ВЛИ"
+											/>
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">5 позиций</span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Slide 4 (скрыт в мобилке) -->
+								<div class="swiper-slide catalog-slide--hidden-mobile">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">КАБЕЛЬНАЯ МУФТА</h3>
+										<div class="catalog-card-image">
+											<img src="images/image3.png" alt="Кабельная муфта" />
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">5 позиций</span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Slide 5 (скрыт в мобилке) -->
+								<div class="swiper-slide catalog-slide--hidden-mobile">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">ОТВЕТВИТЕЛЬНАЯ АРМАТУРА</h3>
+										<div class="catalog-card-image">
+											<img
+												src="images/image1.png"
+												alt="Ответвительная арматура"
+											/>
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">8 позиций</span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Slide 6 (скрыт в мобилке) -->
+								<div class="swiper-slide catalog-slide--hidden-mobile">
+									<a href="#" class="catalog-card">
+										<h3 class="catalog-card-title">
+											УСТРОЙСТВА И ПРИСПОСОБЛЕНИЯ ДЛЯ ЗАЩИТЫ ВЛИ
+										</h3>
+										<div class="catalog-card-image">
+											<img
+												src="images/image2.png"
+												alt="Устройства и приспособления для защиты ВЛИ"
+											/>
+										</div>
+										<div class="catalog-card-meta">
+											<span class="catalog-card-count">5 позиций</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalog-link-btn catalog-link-btn--mobile">
+							<a href="#" class="btn btn-primary">
+								Перейти в каталог
+								<img
+									src="images/icon-arrow-double.svg"
+									alt="Перейти"
+									width="36"
+									height="36"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Request Section -->
+		<section class="request-section">
+			<div class="container">
+				<div class="row">
+					<!-- Right: Request form -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div class="request-form-wrapper corner-tl-30 corner-br-30">
+							<h3
+								class="request-title h3"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								Оставить заявку
+							</h3>
+							<p
+								class="request-subtitle text-18"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								Проведем консультацию и ответим на все ваши вопросы
+							</p>
+							<form
+								class="request-form"
+								data-aos="fade-up"
+								data-aos-delay="400"
+							>
+								<div class="request-form-row request-form-row--two">
+									<div class="request-field">
+										<input
+											type="text"
+											id="request-name"
+											name="name"
+											placeholder="Ваше имя"
+										/>
+									</div>
+									<div class="request-field">
+										<input
+											type="tel"
+											id="request-phone"
+											name="phone"
+											placeholder="Телефон"
+										/>
+									</div>
+								</div>
+
+								<div class="request-form-row">
+									<div class="request-field">
+										<textarea
+											id="request-comment"
+											name="comment"
+											rows="4"
+											placeholder="Комментарий"
+										></textarea>
+									</div>
+								</div>
+
+								<p class="request-policy text-14">
+									Нажимая «Оставить заявку», вы соглашаетесь на обработку
+									<a href="#">персональных данных.</a>
+								</p>
+
+								<div class="request-form-actions">
+									<button type="submit" class="btn btn-primary">
+										Оставить заявку
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Отправить"
+											width="36"
+											height="36"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<!-- Left: Company slider (фон одна картинка, контент меняется) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div
+							class="company-slider corner-tl-30 corner-br-30"
+							data-slider="company"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							style="
+								background-image: url('images/company1.jpg');
+								background-size: cover;
+							"
+						>
+							<div class="company-arrow company-arrow--prev" type="button">
+								<img
+									src="images/icon-arrow-double-white-left.svg"
+									alt="Назад"
+									width="14"
+									height="12"
+								/>
+							</div>
+							<div class="company-arrow company-arrow--next" type="button">
+								<img
+									src="images/icon-arrow-double-white.svg"
+									alt="Вперёд"
+									width="14"
+									height="12"
+								/>
+							</div>
+							<div class="company-slide company-slide--active" data-index="0">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button
+											class="company-dot company-dot--active"
+											data-slide="0"
+										></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">120</div>
+									<div class="company-stat-label h3">сотрудников</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button
+											class="company-dot company-dot--active"
+											data-slide="0"
+										></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										С нами работают высокопрофессиональные специалисты с большим
+										отраслевым опытом
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="company-slide" data-index="1">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button class="company-dot" data-slide="0"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="1"
+										></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">25</div>
+									<div class="company-stat-label">лет на рынке</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button class="company-dot" data-slide="0"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="1"
+										></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										Реализуем проекты по всей России и сопровождаем клиентов на
+										всех этапах
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="company-slide" data-index="2">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button class="company-dot" data-slide="0"></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="2"
+										></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">300+</div>
+									<div class="company-stat-label">проектов</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button class="company-dot" data-slide="0"></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="2"
+										></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										Выполняем сложные задачи для энергетики, промышленности и
+										инфраструктурных объектов
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container container-lg">
+				<div class="row row-center-align">
+					<div class="col-12 col-md-4">
+						<p class="footer-left text-14">© АО «СКАТ» 2026</p>
+					</div>
+					<div class="col-12 col-md-4">
+						<a href="#" class="footer-center text-14"
+							>Политика конфиденциальности</a
+						>
+					</div>
+					<div class="col-12 col-md-4">
+						<p class="footer-right">
+							<a
+								href="https://markweber.ru"
+								target="_blank"
+								class="footer-right-link text-14"
+								>Разработка сайта — Mark Weber
+								<img
+									src="images/markweb.svg"
+									alt="markweber"
+									width="30"
+									height="45"
+								/>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
