@@ -7,11 +7,11 @@
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function () {
 	initFeedbackButton()
-	initMenuEffects()
 	initCatalogSwiper()
 	initCompanySlider()
 	initBurgerMenu()
 	initAdvantagesSwiper()
+	initContactsPage()
 })
 
 /**
@@ -47,16 +47,6 @@ function initFeedbackButton() {
 /**
  * Initialize menu item effects
  */
-function initMenuEffects() {
-	const menuItems = document.querySelectorAll('.menu-item')
-
-	menuItems.forEach(item => {
-		item.addEventListener('click', function (e) {
-			e.preventDefault()
-			console.log('Menu item clicked')
-		})
-	})
-}
 
 /**
  * Initialize Swiper slider for catalog section
@@ -305,3 +295,30 @@ $(function () {
 		}
 	})
 })
+
+/**
+ * Страница контактов: кнопки «Копировать» и переключение блока с данными на карте
+ */
+function initContactsPage() {
+	const copyButtons = document.querySelectorAll('.contacts-copy-btn')
+	copyButtons.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			const toCopy = this.getAttribute('data-copy')
+			if (!toCopy) return
+			navigator.clipboard.writeText(toCopy).then(
+				function () {
+					btn.classList.add('is-active')
+					btn.setAttribute('aria-label', 'Скопировано')
+					setTimeout(function () {
+						btn.classList.remove('is-active')
+						btn.setAttribute('aria-label', 'Копировать')
+					}, 2000)
+				},
+				function () {
+					btn.setAttribute('aria-label', 'Ошибка копирования')
+				},
+			)
+		})
+	})
+
+}
