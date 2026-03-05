@@ -4,12 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SKAT</title>
-		<link rel="stylesheet" href="styles/styles.css" />
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+		<link rel="stylesheet" href="styles/styles.css?ver=5" />
 	</head>
 	<body>
 		<!-- Header -->
@@ -110,25 +110,34 @@
 
 		<!-- Hero Section -->
 		<section class="hero" data-aos="fade-up">
+			<style>
+				.hero-main2 {
+					background-image: url('images/hero2.jpg');
+				}
+				@media (max-width: 768px) {
+					.hero-main2 {
+						background-image: url('images/hero02-mobile.jpg');
+					}
+				}
+			</style>
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-8 col-lg-9 col-xl-9">
-						<div
-							class="hero-main corner-tl-30 corner-br-30"
-							style="background-image: url('images/hero2.jpg')"
-						>
+						<a href="#" class="hero-main hero-main2 corner-tl-30 corner-br-30">
+							<div class="hero-content-overlay"></div>
 							<div class="hero-content-top-left">
 								<h1 data-aos="fade-up" data-aos-delay="200">Кабельная</h1>
 								<h1 data-aos="fade-up" data-aos-delay="400">арматура</h1>
 								<h3 data-aos="fade-up" data-aos-delay="600">110-500 кВТ</h3>
 							</div>
+
 							<div class="hero-content-bottom-right">
 								<div
 									class="hero-content-bottom-right-btn"
 									data-aos="fade-up"
 									data-aos-delay="800"
 								>
-									<a href="#" class="btn btn-primary">
+									<div class="btn btn-primary">
 										Перейти в каталог
 										<img
 											src="images/icon-arrow-double.svg"
@@ -136,11 +145,11 @@
 											width="36"
 											height="36"
 										/>
-									</a>
+									</div>
 								</div>
 								<div class="hero-bottom-titles"></div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<!-- 1/4 - Sidebar List -->
 					<div class="col-12 col-md-4 col-lg-3 col-xl-3">
@@ -238,10 +247,11 @@
 											height="20"
 										/>
 									</div>
-									<h3 class="advantage-title">СЕРТИФИКАЦИЯ И ДОКУМЕНТЫ</h3>
+									<h3 class="advantage-title">Двухбарьерная герметизация</h3>
 								</div>
 								<p class="advantage-text">
-									Наша продукция имеет все виды сертификатов и документации
+									Продукция полностью производится в РТ и соответствует
+									требованиям 719-ФЗ
 								</p>
 							</div>
 						</div>
@@ -261,11 +271,10 @@
 											height="20"
 										/>
 									</div>
-									<h3 class="advantage-title">ГАРАНТИЯ КАЧЕСТВА</h3>
+									<h3 class="advantage-title">Технология холодной усадки</h3>
 								</div>
 								<p class="advantage-text">
-									Строгий контроль качества и работа только с надежными
-									партнерами
+									Быстрый и безопасный монтаж сокращающий длину разделки кабеля
 								</p>
 							</div>
 						</div>
@@ -285,11 +294,14 @@
 											height="24"
 										/>
 									</div>
-									<h3 class="advantage-title">ПРЯМЫЕ ПОСТАВКИ</h3>
+									<h3 class="advantage-title">
+										Собственная разработка соединителей
+									</h3>
 								</div>
 								<p class="advantage-text">
-									Индивидуальный подход и прямые поставки с завода на территорию
-									РФ
+									Коннекторы со срывными болтами проходят физико-механические
+									испытания и сохраняют свои характеристики при различных
+									температурах
 								</p>
 							</div>
 						</div>
@@ -309,11 +321,11 @@
 											height="24"
 										/>
 									</div>
-									<h3 class="advantage-title">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
+									<h3 class="advantage-title">Сухой принцип конструкции</h3>
 								</div>
 								<p class="advantage-text">
-									Являемся производителем кабельных муфт для любых типов кабелей
-									и арматуры
+									Представлена линейка муфт без жидких компонентов, что повышает
+									надёжность и увеличивает срок службы изделия
 								</p>
 							</div>
 						</div>
@@ -733,7 +745,7 @@
 			<div class="container container-lg">
 				<div class="row row-center-align">
 					<div class="col-12 col-md-4">
-						<p class="footer-left text-14">© АО «СКАТ» 2026</p>
+						<p class="footer-left text-14">© ООО «СКАТ» 2026</p>
 					</div>
 					<div class="col-12 col-md-4">
 						<a href="#" class="footer-center text-14"
@@ -769,6 +781,6 @@
 		></script>
 		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
 
-		<script src="js/script.js"></script>
+		<script src="js/script.js?ver=5"></script>
 	</body>
 </html>

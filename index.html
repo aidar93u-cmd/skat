@@ -4,12 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SKAT</title>
-		<link rel="stylesheet" href="styles/styles.css" />
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+		<link rel="stylesheet" href="styles/styles.css?ver=5" />
 	</head>
 	<body>
 		<!-- Header -->
@@ -82,6 +82,20 @@
 
 		<!-- Hero Section -->
 		<section class="hero-two-column" data-aos="fade-up">
+			<style>
+				.hero-main-column1 {
+					background-image: url('images/hero01.jpg');
+				}
+
+				.hero-main-column2 {
+					background-image: url('images/hero02.jpg');
+				}
+				@media (max-width: 768px) {
+					.hero-main-column2 {
+						background-image: url('images/hero02-mobile.jpg');
+					}
+				}
+			</style>
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-12">
@@ -90,10 +104,11 @@
 						</div>
 					</div>
 					<div class="col-12 col-lg-6">
-						<div
-							class="hero-main hero-main-column corner-tl-50 corner-br-50"
-							style="background-image: url('images/hero01.jpg')"
+						<a
+							href="index1.html"
+							class="hero-main hero-main-column hero-main-column1 corner-tl-50 corner-br-50"
 						>
+							<div class="hero-content-overlay"></div>
 							<div class="hero-content-top-left">
 								<h1 class="h2" data-aos="fade-up" data-aos-delay="200">
 									Арматура для СИП
@@ -120,7 +135,7 @@
 							</div>
 
 							<div class="btn-hero-column-overlay">
-								<a href="index1.html" class="btn btn-primary btn-hero-column">
+								<div class="btn btn-primary btn-hero-column">
 									Перейти
 									<img
 										src="images/icon-arrow-double.svg"
@@ -128,15 +143,16 @@
 										width="36"
 										height="36"
 									/>
-								</a>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-12 col-lg-6">
-						<div
-							class="hero-main hero-main-column corner-tl-50 corner-br-50"
-							style="background-image: url('images/hero02.jpg')"
+						<a
+							href="index2.html"
+							class="hero-main hero-main-column hero-main-column2 corner-tl-50 corner-br-50"
 						>
+							<div class="hero-content-overlay"></div>
 							<div class="hero-content-top-left">
 								<h1 class="h2" data-aos="fade-up" data-aos-delay="200">
 									Кабельная арматура
@@ -150,7 +166,7 @@
 								</h3>
 							</div>
 							<div class="btn-hero-column-overlay">
-								<a href="index2.html" class="btn btn-primary btn-hero-column">
+								<div class="btn btn-primary btn-hero-column">
 									Перейти
 									<img
 										src="images/icon-arrow-double.svg"
@@ -158,9 +174,9 @@
 										width="36"
 										height="36"
 									/>
-								</a>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -171,7 +187,7 @@
 			<div class="container container-lg">
 				<div class="row row-center-align">
 					<div class="col-12 col-md-4">
-						<p class="footer-left text-14">© АО «СКАТ» 2026</p>
+						<p class="footer-left text-14">© ООО «СКАТ» 2026</p>
 					</div>
 					<div class="col-12 col-md-4">
 						<a href="#" class="footer-center text-14"
@@ -206,6 +222,6 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
-		<script src="js/script.js"></script>
+		<script src="js/script.js?ver=5"></script>
 	</body>
 </html>
