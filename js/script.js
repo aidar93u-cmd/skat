@@ -31,26 +31,6 @@ function initAOS() {
 document.addEventListener('DOMContentLoaded', initAOS)
 window.addEventListener('load', () => AOS.refresh())
 
-/**
- * Initialize feedback button click handler
- */
-function initFeedbackButton() {
-	const feedbackBtn = document.querySelector('.feedback-btn')
-
-	if (feedbackBtn) {
-		feedbackBtn.addEventListener('click', function () {
-			alert('Feedback form would open here')
-		})
-	}
-}
-
-/**
- * Initialize menu item effects
- */
-
-/**
- * Initialize Swiper slider for catalog section
- */
 function initCatalogSwiper() {
 	if (typeof Swiper === 'undefined') {
 		return
@@ -258,6 +238,11 @@ $(function () {
 		showMaskOnHover: false,
 		clearIncomplete: true,
 	})
+	$('.request-phone').inputmask({
+		mask: '+7 (999) 999-99-99',
+		showMaskOnHover: false,
+		clearIncomplete: true,
+	})
 
 	function validateName() {
 		const $field = $('#request-name')
@@ -284,6 +269,9 @@ $(function () {
 	// Live validation (only required fields)
 	$('#request-name').on('input blur', validateName)
 	$('#request-phone').on('input blur', validatePhone)
+
+	$('.request-name').on('input blur', validateName)
+	$('.request-phone').on('input blur', validatePhone)
 
 	// Submit
 	$('.request-form').on('submit', function (e) {
@@ -320,5 +308,34 @@ function initContactsPage() {
 			)
 		})
 	})
+}
+function initFeedbackButton() {
+	const buttons = document.querySelectorAll('.feedback-btn')
+	const panel = document.getElementById('request-panel')
+	const overlay = document.getElementById('request-overlay')
+	const close = document.querySelector('.request-panel-close')
 
+	if (!buttons.length || !panel || !overlay) return
+
+	function openPanel() {
+		panel.classList.add('is-open')
+		overlay.classList.add('is-open')
+		document.body.style.overflow = 'hidden'
+	}
+
+	function closePanel() {
+		panel.classList.remove('is-open')
+		overlay.classList.remove('is-open')
+		document.body.style.overflow = ''
+	}
+
+	buttons.forEach(function (btn) {
+		btn.addEventListener('click', openPanel)
+	})
+
+	if (close) {
+		close.addEventListener('click', closePanel)
+	}
+
+	overlay.addEventListener('click', closePanel)
 }

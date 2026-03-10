@@ -2980,3 +2980,123 @@ h4,
 		padding: 30px 0 5px;
 	}
 }
+
+/* ============================================
+Форма попап
+============================================ */
+.request-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.35s;
+	z-index: 1000;
+}
+
+.request-overlay.is-open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.request-panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	max-width: 58.9rem;
+	background: #fff;
+
+	transform: translateX(100%);
+	transition: 0.4s ease;
+
+	display: flex;
+	flex-direction: column;
+
+	z-index: 1001;
+	clip-path: polygon(30px 0, 100% 0, 100% 100%, 0 100%, 0 30px);
+}
+
+.request-panel.is-open {
+	transform: translateX(0);
+}
+
+.request-panel-content {
+	padding: 60px 50px 40px;
+	flex: 1;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 160px;
+}
+.request-panel-content .request-title {
+	margin: 0 0 40px;
+}
+.request-panel-close {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	border: none;
+	background: none;
+	font-size: 30px;
+	cursor: pointer;
+	background: #efefef;
+	padding: 11px;
+	line-height: 27px;
+	border-radius: 4px;
+}
+
+.request-panel-submit {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	margin-top: 20px;
+}
+
+.request-panel-footer {
+	padding: 25px 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.request-panel-footer a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--color-gray);
+}
+
+@media screen and (max-width: 768px) {
+	.request-panel-submit {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 15px;
+		margin-top: 20px;
+		flex-direction: column;
+	}
+	.request-panel-close {
+		font-size: 23px;
+		padding: 11px;
+		line-height: 18px;
+		border-radius: 4px;
+		width: 40px;
+		height: 40px;
+		top: 20px;
+		right: 25px;
+	}
+	.request-panel-content {
+		padding: 25px 25px;
+		flex: 1;
+		display: flex;
+		width: 100%;
+		margin-top: 50px;
+	}
+	.request-panel-submit .btn {
+		width: 100%;
+	}
+	.request-panel-footer {
+		padding: 25px;
+	}
+}

@@ -59,7 +59,7 @@
 								<span class="burger-btn__line burger-btn__line--top"></span>
 								<span class="burger-btn__line burger-btn__line--bottom"></span>
 							</button>
-							<button class="btn btn-primary">
+							<button class="btn btn-primary feedback-btn">
 								Оставить заявку
 								<img
 									src="images/icon-arrow-double.svg"
@@ -96,7 +96,7 @@
 					<a href="#" class="menu-item">документация</a>
 					<a href="contacts1.html" class="menu-item">Контакты</a>
 				</nav>
-				<a href="#" class="btn btn-primary">
+				<a href="#" class="btn btn-primary feedback-btn">
 					Оставить заявку
 					<img
 						src="images/icon-arrow-double.svg"
@@ -771,6 +771,76 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="request-overlay" id="request-overlay"></div>
+
+		<div class="request-panel" id="request-panel">
+			<button class="request-panel-close" aria-label="Закрыть">✕</button>
+
+			<div class="request-panel-content">
+				<div class="request-panel-content-inner">
+					<h3 class="request-title h3">
+						Оставьте заявку на
+						<br />бесплатную консультацию
+					</h3>
+
+					<form class="request-form">
+						<div class="request-form-row request-form-row--two">
+							<div class="request-field">
+								<input
+									type="text"
+									class="request-name"
+									name="name"
+									placeholder="Ваше имя"
+								/>
+							</div>
+
+							<div class="request-field">
+								<input
+									type="tel"
+									class="request-phone"
+									name="phone"
+									placeholder="Телефон"
+								/>
+							</div>
+						</div>
+
+						<div class="request-form-row">
+							<div class="request-field">
+								<textarea
+									class="request-comment"
+									name="comment"
+									rows="4"
+									placeholder="Комментарий"
+								></textarea>
+							</div>
+						</div>
+
+						<div class="request-panel-submit">
+							<p class="request-policy text-14">
+								Нажимая «Отправить», вы соглашаетесь на обработку
+								<a href="#">персональных данных</a>
+							</p>
+
+							<button type="submit" class="btn btn-primary">
+								Отправить
+								<img
+									src="images/icon-arrow-double.svg"
+									alt=""
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="request-panel-footer">
+				<a href="tel:+78002505999" class="h3">8 800 250 59 99</a>
+				<span class="text-14">ООО «СКАТ»</span>
+			</div>
+		</div>
 
 		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 		<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
