@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ответвительная арматура</title>
+		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="styles/aos.css" />
+		<link rel="stylesheet" href="styles/styles.css?ver=123" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container container-lg">
+				<div class="row header-row">
+					<!-- Logo -->
+					<div class="col-5 col-md-2 col-lg-2 col-xl-3 header-row__logo">
+						<a href="#" class="header-logo">
+							<img
+								src="images/logo-skat.svg"
+								alt="СКАТ"
+								width="131"
+								height="32"
+							/>
+						</a>
+					</div>
+					<!-- Menu (desktop) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6 header-row__nav">
+						<nav class="menu">
+							<a href="#" class="menu-item menu-item-selected">
+								<span class="menu-icon">
+									<img
+										src="images/icon-menu-grid.svg"
+										alt=""
+										width="10"
+										height="10"
+									/>
+								</span>
+								продукция
+							</a>
+							<a href="#" class="menu-item"> проекты </a>
+							<a href="#" class="menu-item"> о компании </a>
+							<a href="#" class="menu-item"> документация </a>
+							<a href="contacts1.html" class="menu-item"> Контакты </a>
+						</nav>
+					</div>
+					<!-- Phone, Burger, Button -->
+					<div class="col-7 col-md-10 col-lg-4 col-xl-3 header-row__right">
+						<div class="header-right">
+							<a href="tel:+78002505999" class="phone">8 800 250 59 99</a>
+							<button
+								type="button"
+								class="burger-btn"
+								aria-label="Открыть меню"
+							>
+								<span class="burger-btn__line burger-btn__line--top"></span>
+								<span class="burger-btn__line burger-btn__line--bottom"></span>
+							</button>
+							<button class="btn btn-primary feedback-btn">
+								Оставить заявку
+								<img
+									src="images/icon-arrow-double.svg"
+									alt="Подробнее"
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Мобильное меню (выезжает слева) -->
+			<div
+				class="mobile-menu-overlay"
+				id="mobile-menu-overlay"
+				aria-hidden="true"
+			></div>
+			<div class="mobile-menu-panel" id="mobile-menu-panel" aria-hidden="true">
+				<nav class="menu">
+					<a href="#" class="menu-item menu-item-selected">
+						<span class="menu-icon">
+							<img
+								src="images/icon-menu-grid.svg"
+								alt=""
+								width="10"
+								height="10"
+							/>
+						</span>
+						продукция
+					</a>
+					<a href="#" class="menu-item">проекты</a>
+					<a href="#" class="menu-item">о компании</a>
+					<a href="#" class="menu-item">документация</a>
+					<a href="contacts1.html" class="menu-item">Контакты</a>
+				</nav>
+				<a href="#" class="btn btn-primary feedback-btn">
+					Оставить заявку
+					<img
+						src="images/icon-arrow-double.svg"
+						alt=""
+						width="36"
+						height="36"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<!-- Category Section -->
+		<section class="cat-page-section">
+			<div class="container container-lg">
+				<!-- Breadcrumbs -->
+				<div class="row">
+					<div class="col-12">
+						<nav class="cat-breadcrumbs" aria-label="Хлебные крошки" data-aos="fade-up" data-aos-delay="200">
+							<a href="#" class="cat-breadcrumbs__link">Главная</a>
+							<span class="cat-breadcrumbs__sep">/</span>
+							<a href="#" class="cat-breadcrumbs__link">Продукция</a>
+							<span class="cat-breadcrumbs__sep">/</span>
+							<a href="#" class="cat-breadcrumbs__link"
+								>Арматура для СИП и кабельные муфты</a
+							>
+							<span class="cat-breadcrumbs__sep">/</span>
+							<span class="cat-breadcrumbs__current"
+								>Ответвительная арматура</span
+							>
+						</nav>
+					</div>
+				</div>
+
+				<!-- Category title — half width -->
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<h1 class="cat-page-title" data-aos="fade-up" data-aos-delay="400">Ответвительная арматура</h1>
+					</div>
+				</div>
+
+				<!-- Divider -->
+				<div class="cat-page-divider"></div>
+
+				<!-- Мобильный бар фильтров (только ≤991px) -->
+				<div class="cat-mobile-bar" id="cat-mobile-bar">
+					<button class="cat-mb-icon-btn" id="cat-mb-cats" type="button" data-sheet="cats" aria-label="Категория" title="Категория">
+						<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="2" rx="1" fill="currentColor"/><rect y="6" width="12" height="2" rx="1" fill="currentColor"/><rect y="12" width="7" height="2" rx="1" fill="currentColor"/></svg>
+					</button>
+					<button class="cat-mb-icon-btn" id="cat-mb-sort" type="button" data-sheet="sort" aria-label="Сортировка" title="Сортировка">
+						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 2h16M4 7h10M7 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+					</button>
+					<div class="cat-mb-divider"></div>
+					<button class="cat-mb-icon-btn" id="cat-mb-search-btn" type="button" aria-label="Поиск" title="Поиск">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="5" stroke="currentColor" stroke-width="2"/><path d="M11.5 11.5L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+					</button>
+					<div class="cat-mb-spacer"></div>
+					<button class="cat-mb-icon-btn cat-mb-view-toggle" id="cat-mb-view-toggle" type="button" aria-label="Переключить вид" title="Переключить вид" data-current="grid">
+						<!-- Иконка меняется JS-ом: grid → показываем list-icon, list → показываем grid-icon -->
+						<svg class="cat-mb-icon-list" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="5" rx="1" fill="currentColor"/><rect y="9" width="18" height="5" rx="1" fill="currentColor"/></svg>
+						<svg class="cat-mb-icon-grid" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none"><rect width="6" height="6" rx="1" fill="currentColor"/><rect x="8" width="6" height="6" rx="1" fill="currentColor"/><rect y="8" width="6" height="6" rx="1" fill="currentColor"/><rect x="8" y="8" width="6" height="6" rx="1" fill="currentColor"/></svg>
+					</button>
+				</div>
+				<!-- Строка поиска (появляется под баром) -->
+				<div class="cat-mobile-search-row" id="cat-mobile-search-row">
+					<div class="cat-mobile-search-row__inner">
+						<svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="5" stroke="currentColor" stroke-width="2"/><path d="M11.5 11.5L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+						<input class="cat-mobile-search-row__input" id="cat-mb-search-input" type="text" placeholder="Поиск по каталогу…" autocomplete="off" />
+						<button class="cat-mobile-search-row__clear" id="cat-mb-search-clear" type="button" aria-label="Очистить">
+							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+						</button>
+					</div>
+				</div>
+
+				<!-- Main row: sidebar col-4 + products col-8 -->
+				<div class="row">
+					<!-- Sidebar col-4 -->
+					<div class="col-12 col-md-3 cat-sidebar-col" id="cat-sidebar-col">
+						<div class="cat-sidebar__inner" id="cat-sidebar-inner" data-aos="fade-up" data-aos-delay="200">
+							<a href="#" class="cat-sidebar__back">
+								<img src="images/icon-arrow-one-left.svg" alt="Назад" width="14" height="12" />
+								<span>Ответвительная арматура</span>
+							</a>
+							<ul class="cat-sidebar__list">
+								<li class="cat-sidebar__item cat-sidebar__item--active">
+									<button class="cat-sidebar__btn" type="button" data-cat="hermetic">Герметичные ответвительные прокалывающие зажимы</button>
+								</li>
+								<li class="cat-sidebar__item">
+									<button class="cat-sidebar__btn" type="button" data-cat="moisture">Влагозащищённые ответвительные зажимы</button>
+								</li>
+								<li class="cat-sidebar__item">
+									<button class="cat-sidebar__btn" type="button" data-cat="pressed-hermetic">Соединительные прессуемые герметичные зажимы</button>
+								</li>
+								<li class="cat-sidebar__item">
+									<button class="cat-sidebar__btn" type="button" data-cat="tips">Изолированные прессуемые наконечники</button>
+								</li>
+								<li class="cat-sidebar__item">
+									<button class="cat-sidebar__btn" type="button" data-cat="transition">Герметичные ответвительные переходные зажимы</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Products col-8 -->
+					<div class="col-12 col-md-9 cat-products-col">
+						<!-- Toolbar -->
+						<div class="cat-toolbar" data-aos="fade-up" data-aos-delay="400">
+							<div class="cat-toolbar__left">
+								<!-- Custom select (cross-browser) -->
+								<div class="cat-select" id="cat-sort-select">
+									<select class="cat-select__native" aria-label="Сортировка">
+										<option value="popular">Популярное</option>
+										<option value="new">Новинки</option>
+										<option value="az">По названию А–Я</option>
+										<option value="za">По названию Я–А</option>
+									</select>
+									<div
+										class="cat-select__trigger"
+										tabindex="0"
+										role="button"
+										aria-haspopup="listbox"
+									>
+										<span class="cat-select__label">Популярное</span>
+										<svg
+											class="cat-select__arrow"
+											width="10"
+											height="12"
+											viewBox="0 0 10 12"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M8.61431 0.430176C8.61431 0.430176 5.81431 4.43018 4.61431 4.43018C3.41431 4.43018 0.614309 0.430175 0.614309 0.430175"
+												stroke="#FF4E00"
+												stroke-width="1.5"
+											/>
+											<path
+												d="M8.61431 6.43018C8.61431 6.43018 5.81431 10.4302 4.61431 10.4302C3.41431 10.4302 0.614309 6.43018 0.614309 6.43018"
+												stroke="#FF4E00"
+												stroke-width="1.5"
+											/>
+										</svg>
+									</div>
+									<ul class="cat-select__list" role="listbox">
+										<li
+											class="cat-select__option cat-select__option--selected"
+											data-value="popular"
+											role="option"
+											aria-selected="true"
+										>
+											Популярное
+										</li>
+										<li
+											class="cat-select__option"
+											data-value="new"
+											role="option"
+											aria-selected="false"
+										>
+											Новинки
+										</li>
+										<li
+											class="cat-select__option"
+											data-value="az"
+											role="option"
+											aria-selected="false"
+										>
+											По названию А–Я
+										</li>
+										<li
+											class="cat-select__option"
+											data-value="za"
+											role="option"
+											aria-selected="false"
+										>
+											По названию Я–А
+										</li>
+									</ul>
+								</div>
+
+								<div class="cat-toolbar__search">
+									<input
+										type="text"
+										placeholder="Поиск по каталогу…"
+										class="cat-toolbar__search-input"
+									/>
+								</div>
+							</div>
+							<div class="cat-toolbar__views">
+								<button
+									class="cat-toolbar__view-btn cat-toolbar__view-btn--active"
+									data-view="grid"
+									aria-label="Сетка"
+								>
+									<svg
+										width="16"
+										height="16"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<rect x="1" y="1" width="6" height="6" fill="#59554E" />
+										<rect x="9" y="1" width="6" height="6" fill="#59554E" />
+										<rect x="1" y="9" width="6" height="6" fill="#59554E" />
+										<rect x="9" y="9" width="6" height="6" fill="#59554E" />
+									</svg>
+								</button>
+								<button
+									class="cat-toolbar__view-btn"
+									data-view="list"
+									aria-label="Список"
+								>
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 14 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<rect width="14" height="6" fill="#59554E" />
+										<rect y="8" width="14" height="6" fill="#59554E" />
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<!-- Product grid -->
+						<div class="cat-grid" id="cat-grid">
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="200">
+								<div class="cat-card__img">
+									<img src="images/product1.png" alt="ЗОИ-У1" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+                    <h3 class="cat-card__name">
+                      Анкерный клиновый зажим для СИП-2 PA 1000
+                    </h3>
+                    <p class="cat-card__num">160350</p>
+                  </div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="400">
+								<div class="cat-card__img">
+									<img src="images/product2.png" alt="ЗОИ-У2" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										ЗАнкерный клиновый зажим для СИП-2 PA 1000
+									</h3>
+									<p class="cat-card__num">160350</p>
+                </div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="600">
+								<div class="cat-card__img">
+									<img src="images/product3.png" alt="ЗОИ-У3" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный изолирующий ЗОИ-У3
+									</h3>
+									<p class="cat-card__num">Арт. 10-003</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="800">
+								<div class="cat-card__img">
+									<img src="images/product1.png" alt="ЗОИ-У4" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный изолирующий ЗОИ-У4
+									</h3>
+									<p class="cat-card__num">Арт. 10-004</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="200">
+								<div class="cat-card__img">
+									<img src="images/product2.png" alt="ЗОИ-У5" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный самоизолирующий ЗОИ-У5
+									</h3>
+									<p class="cat-card__num">Арт. 10-005</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="400">
+								<div class="cat-card__img">
+									<img src="images/product3.png" alt="ЗОИ-У6" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный самоизолирующий ЗОИ-У6
+									</h3>
+									<p class="cat-card__num">Арт. 10-006</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="600">
+								<div class="cat-card__img">
+									<img src="images/product1.png" alt="ЗОИ-У7" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный прокалывающий ЗОИ-У7
+									</h3>
+									<p class="cat-card__num">Арт. 10-007</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="cat-card" data-aos="fade-up" data-aos-delay="800">
+								<div class="cat-card__img">
+									<img src="images/product2.png" alt="ЗОИ-У8" />
+								</div>
+								<div class="cat-card__body">
+                  <div class="cat-card__body-top">
+									<h3 class="cat-card__name">
+										Зажим ответвительный прокалывающий ЗОИ-У8
+									</h3>
+									<p class="cat-card__num">Арт. 10-008</p></div>
+									<div class="cat-card__actions">
+										<a href="#" class="cat-btn-price">Скачать прайс</a>
+										<a href="#" class="cat-btn-detail">Подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /cat-grid -->
+
+						<!-- Show more -->
+						<div class="cat-showmore">
+							<div class="cat-showmore__line"></div>
+							<button class="btn cat-showmore__btn">
+								Показать ещё 12
+								<img src="images/icon-arrow-double-bottom.svg" alt="Подробнее" width="36" height="36">
+								</svg>
+							</button>
+							<div class="cat-showmore__line"></div>
+						</div>
+					</div>
+					<!-- /col-8 cat-products-col -->
+				</div>
+				<!-- /row -->
+			</div>
+
+		<!-- Bottom sheet (мобильные фильтры) -->
+		<div class="cat-sheet-overlay" id="cat-sheet-overlay"></div>
+		<div class="cat-sheet" id="cat-sheet" role="dialog" aria-modal="true" aria-labelledby="cat-sheet-title">
+			<div class="cat-sheet__handle"></div>
+			<div class="cat-sheet__header">
+				<span class="cat-sheet__title" id="cat-sheet-title">Категория</span>
+				<button class="cat-sheet__close" id="cat-sheet-close" type="button" aria-label="Закрыть">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</button>
+			</div>
+			<!-- Панель: подкатегории -->
+			<div class="cat-sheet__panel" id="cat-sheet-cats">
+				<ul class="cat-sheet__list">
+					<li class="cat-sheet__item cat-sheet__item--active">
+						<button class="cat-sheet__item-btn" type="button" data-cat="hermetic">Герметичные ответвительные прокалывающие зажимы</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-cat="moisture">Влагозащищённые ответвительные зажимы</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-cat="pressed-hermetic">Соединительные прессуемые герметичные зажимы</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-cat="tips">Изолированные прессуемые наконечники</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-cat="transition">Герметичные ответвительные переходные зажимы</button>
+					</li>
+				</ul>
+			</div>
+			<!-- Панель: сортировка -->
+			<div class="cat-sheet__panel cat-sheet__panel--hidden" id="cat-sheet-sort">
+				<ul class="cat-sheet__list">
+					<li class="cat-sheet__item cat-sheet__item--active">
+						<button class="cat-sheet__item-btn" type="button" data-sort="popular">Популярное</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-sort="new">Новинки</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-sort="az">По названию А–Я</button>
+					</li>
+					<li class="cat-sheet__item">
+						<button class="cat-sheet__item-btn" type="button" data-sort="za">По названию Я–А</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</section>
+
+		<!-- Request Section -->
+		<section class="request-section">
+			<div class="container">
+				<div class="row">
+					<!-- Right: Request form -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div class="request-form-wrapper corner-tl-30 corner-br-30">
+							<h3
+								class="request-title h3"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								Оставить заявку
+							</h3>
+							<p
+								class="request-subtitle text-18"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								Проведем консультацию и ответим на все ваши вопросы
+							</p>
+							<form
+								class="request-form"
+								data-aos="fade-up"
+								data-aos-delay="400"
+							>
+								<div class="request-form-row request-form-row--two">
+									<div class="request-field">
+										<input
+											type="text"
+											id="request-name"
+											name="name"
+											placeholder="Ваше имя"
+										/>
+									</div>
+									<div class="request-field">
+										<input
+											type="tel"
+											id="request-phone"
+											name="phone"
+											placeholder="Телефон"
+										/>
+									</div>
+								</div>
+
+								<div class="request-form-row">
+									<div class="request-field">
+										<textarea
+											id="request-comment"
+											name="comment"
+											rows="4"
+											placeholder="Комментарий"
+										></textarea>
+									</div>
+								</div>
+
+								<p class="request-policy text-14">
+									Нажимая «Оставить заявку», вы соглашаетесь на обработку
+									<a href="#">персональных данных.</a>
+								</p>
+
+								<div class="request-form-actions">
+									<button type="submit" class="btn btn-primary">
+										Оставить заявку
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Отправить"
+											width="36"
+											height="36"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<!-- Left: Company slider (фон одна картинка, контент меняется) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div
+							class="company-slider corner-tl-30 corner-br-30"
+							data-slider="company"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							style="
+								background-image: url('images/company1.jpg');
+								background-size: cover;
+							"
+						>
+							<div class="company-arrow company-arrow--prev" type="button">
+								<img
+									src="images/icon-arrow-double-white-left.svg"
+									alt="Назад"
+									width="14"
+									height="12"
+								/>
+							</div>
+							<div class="company-arrow company-arrow--next" type="button">
+								<img
+									src="images/icon-arrow-double-white.svg"
+									alt="Вперёд"
+									width="14"
+									height="12"
+								/>
+							</div>
+							<div class="company-slide company-slide--active" data-index="0">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button
+											class="company-dot company-dot--active"
+											data-slide="0"
+										></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">120</div>
+									<div class="company-stat-label h3">сотрудников</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button
+											class="company-dot company-dot--active"
+											data-slide="0"
+										></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										С нами работают высокопрофессиональные специалисты с большим
+										отраслевым опытом
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="company-slide" data-index="1">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button class="company-dot" data-slide="0"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="1"
+										></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">2000+</div>
+									<div class="company-stat-label">наименований в каталоге</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button class="company-dot" data-slide="0"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="1"
+										></button>
+										<button class="company-dot" data-slide="2"></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										Реализуем проекты по всей России и сопровождаем клиентов на
+										всех этапах
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="company-slide" data-index="2">
+								<div class="company-slide-top">
+									<span class="company-slide-tag h3">о компании</span>
+									<div class="company-slide-dots company-slide-dots--pc">
+										<button class="company-dot" data-slide="0"></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="2"
+										></button>
+									</div>
+								</div>
+								<div class="company-slide-center">
+									<div class="company-stat-number">300+</div>
+									<div class="company-stat-label">проектов</div>
+									<div class="company-slide-dots company-slide-dots--mobile">
+										<button class="company-dot" data-slide="0"></button>
+										<button class="company-dot" data-slide="1"></button>
+										<button
+											class="company-dot company-dot--active"
+											data-slide="2"
+										></button>
+									</div>
+								</div>
+								<div class="company-slide-bottom">
+									<p class="company-slide-text">
+										Выполняем сложные задачи для энергетики, промышленности и
+										инфраструктурных объектов
+									</p>
+									<a href="#" class="btn btn-primary company-slide-btn">
+										в раздел компании
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Перейти"
+											width="36"
+											height="36"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container container-lg">
+				<div class="row row-center-align">
+					<div class="col-12 col-md-4">
+						<p class="footer-left text-14">© ООО «СКАТ» 2026</p>
+					</div>
+					<div class="col-12 col-md-4">
+						<a href="#" class="footer-center text-14"
+							>Политика конфиденциальности</a
+						>
+					</div>
+					<div class="col-12 col-md-4">
+						<p class="footer-right">
+							<a
+								href="https://markweber.ru"
+								target="_blank"
+								class="footer-right-link text-14"
+								>Разработка сайта — Mark Weber
+								<img
+									src="images/markweb.svg"
+									alt="markweber"
+									width="30"
+									height="45"
+								/>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="request-overlay" id="request-overlay"></div>
+
+		<div class="request-panel" id="request-panel">
+			<button class="request-panel-close" aria-label="Закрыть">✕</button>
+
+			<div class="request-panel-content">
+				<div class="request-panel-content-inner">
+					<h3 class="request-title h3">
+						Оставьте заявку на
+						<br />бесплатную консультацию
+					</h3>
+
+					<form class="request-form">
+						<div class="request-form-row request-form-row--two">
+							<div class="request-field">
+								<input
+									type="text"
+									class="request-name"
+									name="name"
+									placeholder="Ваше имя"
+								/>
+							</div>
+
+							<div class="request-field">
+								<input
+									type="tel"
+									class="request-phone"
+									name="phone"
+									placeholder="Телефон"
+								/>
+							</div>
+						</div>
+
+						<div class="request-form-row">
+							<div class="request-field">
+								<textarea
+									class="request-comment"
+									name="comment"
+									rows="4"
+									placeholder="Комментарий"
+								></textarea>
+							</div>
+						</div>
+
+						<div class="request-panel-submit">
+							<p class="request-policy text-14">
+								Нажимая «Отправить», вы соглашаетесь на обработку
+								<a href="#">персональных данных</a>
+							</p>
+
+							<button type="submit" class="btn btn-primary">
+								Отправить
+								<img
+									src="images/icon-arrow-double.svg"
+									alt=""
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="request-panel-footer">
+				<a href="tel:+78002505999" class="h3">8 800 250 59 99</a>
+				<span class="text-14">ООО «СКАТ»</span>
+			</div>
+		</div>
+
+		<script src="js/aos.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/jquery.inputmask.bundle.js"></script>
+
+		<script src="js/script.js?ver=123"></script>
+	</body>
+</html>

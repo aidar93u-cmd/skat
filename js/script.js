@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	initBurgerMenu()
 	initAdvantagesSwiper()
 	initContactsPage()
+	initCatalogPage()
+	initProductPage()
 })
 
 /**
@@ -338,4 +340,441 @@ function initFeedbackButton() {
 	}
 
 	overlay.addEventListener('click', closePanel)
+}
+
+// ============================================================
+// СТРАНИЦА КАТАЛОГА (catalog1.html)
+// ============================================================
+
+/**
+ * Инициализация страницы каталога:
+ * - Sticky сайдбар с остановкой у нижней границы колонки
+ * - Кастомный select (кросс-браузерный)
+ * - Переключение вида сетка / список
+ */
+function initCatalogPage() {
+	initCatSidebar()
+	initCatFilterGroups()
+	initCatFilterReset()
+	initCatSelect()
+	initCatViewToggle()
+	initCatMobileBar()
+}
+
+/** Sticky сайдбар: реализован чистым CSS (position: sticky; top: 20px)
+ *  Нативно останавливается у нижней границы родительской колонки — без скачков.
+ */
+function initCatSidebar() {
+	// Логика не требуется — браузер обрабатывает sticky самостоятельно.
+}
+
+/** Аккордеон групп фильтра: раскрытие/закрытие по клику на заголовок */
+function initCatFilterGroups() {
+	var groups = document.querySelectorAll('.cat-filter-group')
+	groups.forEach(function (group) {
+		var toggle = group.querySelector('.cat-filter-group__toggle')
+		if (!toggle) return
+		toggle.addEventListener('click', function () {
+			var isOpen = group.classList.toggle('is-open')
+			toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+		})
+	})
+}
+
+/** Сброс фильтров: снять все чекбоксы, задизейблить кнопку */
+function initCatFilterReset() {
+	var resetBtn = document.getElementById('cat-filter-reset')
+	var filterPanel = document.querySelector('.cat-filter')
+	if (!resetBtn || !filterPanel) return
+
+	function updateResetBtn() {
+		var checked = filterPanel.querySelectorAll('input[type="checkbox"]:checked')
+		resetBtn.disabled = checked.length === 0
+	}
+
+	filterPanel.addEventListener('change', updateResetBtn)
+
+	resetBtn.addEventListener('click', function () {
+		filterPanel
+			.querySelectorAll('input[type="checkbox"]')
+			.forEach(function (cb) {
+				cb.checked = false
+			})
+		resetBtn.disabled = true
+		// Точка расширения для будущего AJAX-запроса:
+		// dispatchEvent(new CustomEvent('cat:filter:reset'))
+	})
+
+	updateResetBtn()
+}
+
+/** Кастомный select: открытие/закрытие, выбор значения */
+function initCatSelect() {
+	var selects = document.querySelectorAll('.cat-select')
+	selects.forEach(function (wrap) {
+		var trigger = wrap.querySelector('.cat-select__trigger')
+		var label = wrap.querySelector('.cat-select__label')
+		var options = wrap.querySelectorAll('.cat-select__option')
+		var native = wrap.querySelector('.cat-select__native')
+		if (!trigger || !options.length) return
+
+		function open() {
+			wrap.classList.add('is-open')
+			trigger.setAttribute('aria-expanded', 'true')
+		}
+		function close() {
+			wrap.classList.remove('is-open')
+			trigger.setAttribute('aria-expanded', 'false')
+		}
+		function toggle() {
+			wrap.classList.contains('is-open') ? close() : open()
+		}
+
+		trigger.addEventListener('click', function (e) {
+			e.stopPropagation()
+			toggle()
+		})
+		trigger.addEventListener('keydown', function (e) {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault()
+				toggle()
+			}
+			if (e.key === 'Escape') close()
+		})
+
+		options.forEach(function (opt) {
+			opt.addEventListener('click', function () {
+				var val = opt.dataset.value
+				var text = opt.textContent.trim()
+				// Обновить label
+				if (label) label.textContent = text
+				// Обновить нативный select
+				if (native) native.value = val
+				// Обновить selected-класс
+				options.forEach(function (o) {
+					o.classList.remove('cat-select__option--selected')
+					o.setAttribute('aria-selected', 'false')
+				})
+				opt.classList.add('cat-select__option--selected')
+				opt.setAttribute('aria-selected', 'true')
+				close()
+			})
+		})
+
+		// Закрыть при клике вне
+		document.addEventListener('click', function (e) {
+			if (!wrap.contains(e.target)) close()
+		})
+	})
+}
+
+/** Переключение вида: сетка / список */
+function initCatViewToggle() {
+	var btns = document.querySelectorAll('.cat-toolbar__view-btn')
+	var grid = document.getElementById('cat-grid')
+	if (!btns.length || !grid) return
+
+	btns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			btns.forEach(function (b) {
+				b.classList.remove('cat-toolbar__view-btn--active')
+			})
+			btn.classList.add('cat-toolbar__view-btn--active')
+			grid.classList.toggle('list-view', btn.dataset.view === 'list')
+		})
+	})
+}
+
+/**
+ * Мобильный бар: bottom sheet (категории/сортировка), поиск, вид сетки
+ * Синхронизирует состояние с desktop-сайдбаром и desktop-тулбаром
+ */
+function initCatMobileBar() {
+	var overlay = document.getElementById('cat-sheet-overlay')
+	var sheet = document.getElementById('cat-sheet')
+	var sheetTitle = document.getElementById('cat-sheet-title')
+	var sheetClose = document.getElementById('cat-sheet-close')
+	var panelCats = document.getElementById('cat-sheet-cats')
+	var panelSort = document.getElementById('cat-sheet-sort')
+
+	var btnCats = document.getElementById('cat-mb-cats')
+	var btnSort = document.getElementById('cat-mb-sort')
+	var grid = document.getElementById('cat-grid')
+
+	var searchBtn = document.getElementById('cat-mb-search-btn')
+	var searchRow = document.getElementById('cat-mobile-search-row')
+	var searchInput = document.getElementById('cat-mb-search-input')
+	var searchClear = document.getElementById('cat-mb-search-clear')
+
+	var viewToggle = document.getElementById('cat-mb-view-toggle')
+
+	if (!overlay || !sheet) return
+
+	/* ── Bottom sheet ── */
+	function openSheet(panel) {
+		panelCats.classList.toggle('cat-sheet__panel--hidden', panel !== 'cats')
+		panelSort.classList.toggle('cat-sheet__panel--hidden', panel !== 'sort')
+		sheetTitle.textContent = panel === 'cats' ? 'Категория' : 'Сортировка'
+		overlay.classList.add('is-open')
+		sheet.classList.add('is-open')
+		document.body.style.overflow = 'hidden'
+	}
+
+	function closeSheet() {
+		overlay.classList.remove('is-open')
+		sheet.classList.remove('is-open')
+		document.body.style.overflow = ''
+	}
+
+	if (btnCats)
+		btnCats.addEventListener('click', function () {
+			openSheet('cats')
+		})
+	if (btnSort)
+		btnSort.addEventListener('click', function () {
+			openSheet('sort')
+		})
+	if (sheetClose) sheetClose.addEventListener('click', closeSheet)
+	overlay.addEventListener('click', closeSheet)
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') closeSheet()
+	})
+
+	/* ── Выбор подкатегории ── */
+	var sheetCatBtns = (panelCats || document).querySelectorAll(
+		'.cat-sheet__item-btn[data-cat]',
+	)
+	sheetCatBtns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var cat = btn.dataset.cat
+			sheetCatBtns.forEach(function (b) {
+				b.closest('.cat-sheet__item').classList.remove(
+					'cat-sheet__item--active',
+				)
+			})
+			btn.closest('.cat-sheet__item').classList.add('cat-sheet__item--active')
+			var desktopBtns = document.querySelectorAll('.cat-sidebar__btn[data-cat]')
+			desktopBtns.forEach(function (b) {
+				b.closest('.cat-sidebar__item').classList.remove(
+					'cat-sidebar__item--active',
+				)
+				if (b.dataset.cat === cat) {
+					b.closest('.cat-sidebar__item').classList.add(
+						'cat-sidebar__item--active',
+					)
+				}
+			})
+			if (btnCats) btnCats.classList.add('is-active')
+			closeSheet()
+		})
+	})
+
+	/* ── Выбор сортировки ── */
+	var sheetSortBtns = (panelSort || document).querySelectorAll(
+		'.cat-sheet__item-btn[data-sort]',
+	)
+	sheetSortBtns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var sort = btn.dataset.sort
+			sheetSortBtns.forEach(function (b) {
+				b.closest('.cat-sheet__item').classList.remove(
+					'cat-sheet__item--active',
+				)
+			})
+			btn.closest('.cat-sheet__item').classList.add('cat-sheet__item--active')
+			var nativeSelect = document.querySelector('.cat-select__native')
+			var selectLabel = document.querySelector('.cat-select__label')
+			var selectOptions = document.querySelectorAll('.cat-select__option')
+			if (nativeSelect) nativeSelect.value = sort
+			if (selectLabel) selectLabel.textContent = btn.textContent.trim()
+			selectOptions.forEach(function (o) {
+				o.classList.toggle(
+					'cat-select__option--selected',
+					o.dataset.value === sort,
+				)
+				o.setAttribute(
+					'aria-selected',
+					o.dataset.value === sort ? 'true' : 'false',
+				)
+			})
+			if (btnSort) btnSort.classList.add('is-active')
+			closeSheet()
+		})
+	})
+
+	/* ── Поиск (slide-down строка под баром) ── */
+	function openSearch() {
+		if (!searchRow) return
+		searchRow.classList.add('is-open')
+		if (searchBtn) searchBtn.classList.add('is-active')
+		setTimeout(function () {
+			if (searchInput) searchInput.focus()
+		}, 310)
+	}
+	function closeSearch() {
+		if (!searchRow) return
+		searchRow.classList.remove('is-open')
+		if (searchBtn) searchBtn.classList.remove('is-active')
+		if (searchInput) searchInput.value = ''
+		var desktopInput = document.querySelector('.cat-toolbar__search-input')
+		if (desktopInput) desktopInput.value = ''
+	}
+
+	if (searchBtn) {
+		searchBtn.addEventListener('click', function (e) {
+			e.stopPropagation()
+			if (searchRow && searchRow.classList.contains('is-open')) {
+				closeSearch()
+			} else {
+				openSearch()
+			}
+		})
+	}
+	if (searchClear) {
+		searchClear.addEventListener('click', function () {
+			closeSearch()
+		})
+	}
+	if (searchInput) {
+		searchInput.addEventListener('input', function () {
+			var desktopInput = document.querySelector('.cat-toolbar__search-input')
+			if (desktopInput) desktopInput.value = searchInput.value
+		})
+	}
+
+	/* ── Переключение вида (одна кнопка) ── */
+	if (viewToggle) {
+		var iconList = viewToggle.querySelector('.cat-mb-icon-list')
+		var iconGrid = viewToggle.querySelector('.cat-mb-icon-grid')
+		viewToggle.addEventListener('click', function () {
+			var current = viewToggle.dataset.current || 'grid'
+			var next = current === 'grid' ? 'list' : 'grid'
+			viewToggle.dataset.current = next
+			if (iconList) iconList.style.display = next === 'grid' ? 'flex' : 'none'
+			if (iconGrid) iconGrid.style.display = next === 'list' ? 'flex' : 'none'
+			if (grid) grid.classList.toggle('list-view', next === 'list')
+			var desktopBtns = document.querySelectorAll(
+				'.cat-toolbar .cat-toolbar__view-btn',
+			)
+			desktopBtns.forEach(function (b) {
+				b.classList.toggle(
+					'cat-toolbar__view-btn--active',
+					b.dataset.view === next,
+				)
+			})
+		})
+	}
+}
+
+/* ============================================
+   СТРАНИЦА ТОВАРА
+   ============================================ */
+
+function initProductPage() {
+	if (!document.querySelector('.pd-section')) return
+
+	initProductGallery()
+	initProductVariants()
+	initProductAccordions()
+	initRelatedSwiper()
+}
+
+/**
+ * Галерея: вертикальные миниатюры + главный слайдер (Swiper thumbs)
+ */
+function initProductGallery() {
+	if (!document.getElementById('pd-main-swiper')) return
+
+	var thumbsSwiper = null
+	var thumbsEl = document.getElementById('pd-thumbs-swiper')
+
+	// Миниатюры — только на десктопе (≥768px)
+	if (thumbsEl && window.innerWidth >= 768) {
+		thumbsSwiper = new Swiper('#pd-thumbs-swiper', {
+			direction: 'vertical',
+			slidesPerView: 'auto',
+			spaceBetween: 8,
+			freeMode: true,
+			watchSlidesProgress: true,
+		})
+	}
+
+	new Swiper('#pd-main-swiper', {
+		spaceBetween: 0,
+		thumbs: thumbsSwiper ? { swiper: thumbsSwiper } : false,
+		navigation: {
+			prevEl: '.pd-gallery-prev',
+			nextEl: '.pd-gallery-next',
+		},
+	})
+}
+
+/**
+ * Варианты: кнопки-радио по группам
+ */
+function initProductVariants() {
+	var btns = document.querySelectorAll('.pd-variant-btn')
+	btns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var group = btn.dataset.group
+			document
+				.querySelectorAll('.pd-variant-btn[data-group="' + group + '"]')
+				.forEach(function (b) {
+					b.classList.remove('pd-variant-btn--active')
+				})
+			btn.classList.add('pd-variant-btn--active')
+		})
+	})
+}
+
+/**
+ * Аккордеоны
+ */
+function initProductAccordions() {
+	var heads = document.querySelectorAll('.pd-accordion__head')
+	heads.forEach(function (head) {
+		head.addEventListener('click', function () {
+			var accordion = head.closest('.pd-accordion')
+			var isOpen = accordion.classList.contains('pd-accordion--open')
+
+			// Закрыть все
+			document.querySelectorAll('.pd-accordion--open').forEach(function (a) {
+				a.classList.remove('pd-accordion--open')
+				a.querySelector('.pd-accordion__head').setAttribute(
+					'aria-expanded',
+					'false',
+				)
+			})
+
+			// Открыть кликнутый (если был закрыт)
+			if (!isOpen) {
+				accordion.classList.add('pd-accordion--open')
+				head.setAttribute('aria-expanded', 'true')
+			}
+		})
+	})
+}
+
+/**
+ * Слайдер "Другие товары"
+ */
+function initRelatedSwiper() {
+	if (!document.querySelector('.pd-related-swiper')) return
+
+	new Swiper('.pd-related-swiper', {
+		slidesPerView: 5.5,
+		spaceBetween: 16,
+		navigation: {
+			prevEl: '.pd-related-prev',
+			nextEl: '.pd-related-next',
+		},
+		breakpoints: {
+			0: { slidesPerView: 1, spaceBetween: 5 },
+			480: { slidesPerView: 1.2, spaceBetween: 5 },
+			768: { slidesPerView: 2.8, spaceBetween: 10 },
+			992: { slidesPerView: 4.3, spaceBetween: 10 },
+			1200: { slidesPerView: 4.5, spaceBetween: 20 },
+			1500: { slidesPerView: 5.5, spaceBetween: 20 },
+		},
+	})
 }
