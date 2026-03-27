@@ -706,6 +706,13 @@ function initProductGallery() {
 			prevEl: '.pd-gallery-prev',
 			nextEl: '.pd-gallery-next',
 		},
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 1,
+		breakpoints: {
+			0: { slidesPerView: 1.2, spaceBetween: 10 },
+			1200: { slidesPerView: 1, spaceBetween: 0 },
+		},
 	})
 }
 
@@ -731,23 +738,19 @@ function initProductVariants() {
  * Аккордеоны
  */
 function initProductAccordions() {
-	var heads = document.querySelectorAll('.pd-accordion__head')
+	const heads = document.querySelectorAll('.pd-accordion__head')
+
 	heads.forEach(function (head) {
 		head.addEventListener('click', function () {
-			var accordion = head.closest('.pd-accordion')
-			var isOpen = accordion.classList.contains('pd-accordion--open')
+			const accordion = head.closest('.pd-accordion')
+			const isOpen = accordion.classList.contains('pd-accordion--open')
 
-			// Закрыть все
-			document.querySelectorAll('.pd-accordion--open').forEach(function (a) {
-				a.classList.remove('pd-accordion--open')
-				a.querySelector('.pd-accordion__head').setAttribute(
-					'aria-expanded',
-					'false',
-				)
-			})
-
-			// Открыть кликнутый (если был закрыт)
-			if (!isOpen) {
+			if (isOpen) {
+				// close current accordion
+				accordion.classList.remove('pd-accordion--open')
+				head.setAttribute('aria-expanded', 'false')
+			} else {
+				// open current accordion
 				accordion.classList.add('pd-accordion--open')
 				head.setAttribute('aria-expanded', 'true')
 			}
@@ -769,8 +772,8 @@ function initRelatedSwiper() {
 			nextEl: '.pd-related-next',
 		},
 		breakpoints: {
-			0: { slidesPerView: 1, spaceBetween: 5 },
-			480: { slidesPerView: 1.2, spaceBetween: 5 },
+			0: { slidesPerView: 1.1, spaceBetween: 10 },
+			480: { slidesPerView: 1.2, spaceBetween: 10 },
 			768: { slidesPerView: 2.8, spaceBetween: 10 },
 			992: { slidesPerView: 4.3, spaceBetween: 10 },
 			1200: { slidesPerView: 4.5, spaceBetween: 20 },
