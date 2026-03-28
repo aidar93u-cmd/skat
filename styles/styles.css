@@ -3887,7 +3887,8 @@ h4,
 		gap: 4px;
 	}
 	.cat-page-title {
-		font-size: 40px;
+		font-size: 36px;
+		word-break: break-all;
 	}
 	.cat-card__name {
 		font-size: 14px;
@@ -4436,7 +4437,31 @@ h4,
 	}
 	.pd-spec-key,
 	.pd-spec-val {
-		font-size: 12px;
+		font-size: 14px;
+	}
+	.pd-spec-val {
+		font-weight: 500;
+		padding: 0;
+	}
+	.pd-accordion--open .pd-accordion__body {
+		padding-top: 15px;
+	}
+	.pd-spec-row {
+		display: flex;
+		align-items: baseline;
+		gap: 6px;
+
+		padding: 6px 0;
+		flex-direction: column;
+	}
+	.pd-spec-row:nth-last-child(1) .pd-spec-dots {
+		display: none;
+	}
+	.pd-spec-dots {
+		/* display: none; */
+		width: 100%;
+		order: 3;
+		margin-top: 5px;
 	}
 	.pd-accordion__text {
 		font-size: 14px;
@@ -4536,7 +4561,7 @@ h4,
 	}
 
 	.pd-related .cat-btn-price,
-	.cat-btn-detail {
+	.pd-related .cat-btn-detail {
 		font-size: 12px;
 		padding: 16px 8px;
 		border-radius: 6px;
