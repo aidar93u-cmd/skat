@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Проекты — СКАТ</title>
+		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="styles/aos.css" />
+		<link rel="stylesheet" href="styles/styles.css?ver=proj1" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container container-lg">
+				<div class="row header-row">
+					<!-- Logo -->
+					<div class="col-5 col-md-2 col-lg-2 col-xl-3 header-row__logo">
+						<a href="index.html" class="header-logo">
+							<img
+								src="images/logo-skat.svg"
+								alt="СКАТ"
+								width="131"
+								height="32"
+							/>
+						</a>
+					</div>
+					<!-- Menu (desktop) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6 header-row__nav">
+						<nav class="menu">
+							<a href="#" class="menu-item menu-item-selected">
+								<span class="menu-icon">
+									<img
+										src="images/icon-menu-grid.svg"
+										alt=""
+										width="10"
+										height="10"
+									/>
+								</span>
+								продукция
+							</a>
+							<a href="#" class="menu-item">проекты</a>
+							<a href="#" class="menu-item">о компании</a>
+							<a href="#" class="menu-item">документация</a>
+							<a href="contacts1.html" class="menu-item">Контакты</a>
+						</nav>
+					</div>
+					<!-- Phone, Burger, Button -->
+					<div class="col-7 col-md-10 col-lg-4 col-xl-3 header-row__right">
+						<div class="header-right">
+							<a href="tel:+78002505999" class="phone">8 800 250 59 99</a>
+							<button
+								type="button"
+								class="burger-btn"
+								aria-label="Открыть меню"
+							>
+								<span class="burger-btn__line burger-btn__line--top"></span>
+								<span class="burger-btn__line burger-btn__line--bottom"></span>
+							</button>
+							<button class="btn btn-primary feedback-btn">
+								Оставить заявку
+								<img
+									src="images/icon-arrow-double.svg"
+									alt="Подробнее"
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Мобильное меню (выезжает слева) -->
+			<div
+				class="mobile-menu-overlay"
+				id="mobile-menu-overlay"
+				aria-hidden="true"
+			></div>
+			<div class="mobile-menu-panel" id="mobile-menu-panel" aria-hidden="true">
+				<nav class="menu">
+					<a href="#" class="menu-item menu-item-selected">
+						<span class="menu-icon">
+							<img
+								src="images/icon-menu-grid.svg"
+								alt=""
+								width="10"
+								height="10"
+							/>
+						</span>
+						продукция
+					</a>
+					<a href="#" class="menu-item">проекты</a>
+					<a href="#" class="menu-item">о компании</a>
+					<a href="#" class="menu-item">документация</a>
+					<a href="contacts1.html" class="menu-item">Контакты</a>
+				</nav>
+				<a href="#" class="btn btn-primary feedback-btn">
+					Оставить заявку
+					<img
+						src="images/icon-arrow-double.svg"
+						alt=""
+						width="36"
+						height="36"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<!-- ======================== PROJECTS PAGE ======================== -->
+		<section class="projects-page-section">
+			<div class="container container-lg">
+				<!-- Breadcrumbs -->
+				<div class="row">
+					<div class="col-12">
+						<nav
+							class="cat-breadcrumbs"
+							aria-label="Хлебные крошки"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<a href="index.html" class="cat-breadcrumbs__link">Главная</a>
+							<span class="cat-breadcrumbs__sep">/</span>
+							<span class="cat-breadcrumbs__current">Проекты</span>
+						</nav>
+					</div>
+				</div>
+
+				<!-- Title -->
+				<div class="row">
+					<div class="col-12">
+						<h1
+							class="projects-page-title"
+							data-aos="fade-up"
+							data-aos-delay="150"
+						>
+							Проекты
+						</h1>
+					</div>
+				</div>
+			</div>
+
+			<!-- Swiper -->
+			<div class="container container-lg">
+				<div class="swiper projects-swiper">
+					<div class="swiper-wrapper">
+						<!-- ===== SLIDE 1 ===== -->
+						<div class="swiper-slide">
+							<div class="projects-grid">
+								<!-- Big card (left) -->
+								<a
+									href="project.html"
+									class="proj-card proj-card--big corner-tl-30"
+									style="background-image: url('images/project1.jpg')"
+									data-aos="fade-up"
+									data-aos-delay="0"
+								>
+									<span class="proj-card__date">2024 апр - 2026 янв</span>
+									<h3 class="proj-card__title">
+										Модернизация кабельных линий 500 кВ с заменой на кабельные
+										линии 500 кВ с изоляции из сшитого полиэтилена
+									</h3>
+								</a>
+								<!-- Right 3×2 grid -->
+								<div class="projects-grid__right">
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project2.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="100"
+									>
+										<span class="proj-card__date">2022 янв — 2023 июн</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project3.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="150"
+									>
+										<span class="proj-card__date">2023 апр — 2024 фев</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project4.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="200"
+									>
+										<span class="proj-card__date">2021 сен — 2022 дек</span>
+										<h3 class="proj-card__title">
+											Модернизация кабельных линий 500 кВ с заменой
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project5.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="250"
+									>
+										<span class="proj-card__date">2024 янв — 2025 мар</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project6.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project1.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- ===== SLIDE 2 ===== -->
+						<div class="swiper-slide">
+							<div class="projects-grid">
+								<!-- Big card (left) -->
+								<a
+									href="project.html"
+									class="proj-card proj-card--big corner-tl-30"
+									style="background-image: url('images/project1.jpg')"
+									data-aos="fade-up"
+									data-aos-delay="0"
+								>
+									<span class="proj-card__date">2024 апр - 2026 янв</span>
+									<h3 class="proj-card__title">
+										Модернизация кабельных линий 500 кВ с заменой на кабельные
+										линии 500 кВ с изоляции из сшитого полиэтилена
+									</h3>
+								</a>
+								<!-- Right 3×2 grid -->
+								<div class="projects-grid__right">
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project2.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="100"
+									>
+										<span class="proj-card__date">2022 янв — 2023 июн</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project3.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="150"
+									>
+										<span class="proj-card__date">2023 апр — 2024 фев</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project4.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="200"
+									>
+										<span class="proj-card__date">2021 сен — 2022 дек</span>
+										<h3 class="proj-card__title">
+											Модернизация кабельных линий 500 кВ с заменой
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project5.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="250"
+									>
+										<span class="proj-card__date">2024 янв — 2025 мар</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project6.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project1.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- ===== SLIDE 3 ===== -->
+						<div class="swiper-slide">
+							<div class="projects-grid">
+								<!-- Big card (left) -->
+								<a
+									href="project.html"
+									class="proj-card proj-card--big corner-tl-30"
+									style="background-image: url('images/project1.jpg')"
+									data-aos="fade-up"
+									data-aos-delay="0"
+								>
+									<span class="proj-card__date">2024 апр - 2026 янв</span>
+									<h3 class="proj-card__title">
+										Модернизация кабельных линий 500 кВ с заменой на кабельные
+										линии 500 кВ с изоляции из сшитого полиэтилена
+									</h3>
+								</a>
+								<!-- Right 3×2 grid -->
+								<div class="projects-grid__right">
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project2.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="100"
+									>
+										<span class="proj-card__date">2022 янв — 2023 июн</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project3.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="150"
+									>
+										<span class="proj-card__date">2023 апр — 2024 фев</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project4.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="200"
+									>
+										<span class="proj-card__date">2021 сен — 2022 дек</span>
+										<h3 class="proj-card__title">
+											Модернизация кабельных линий 500 кВ с заменой
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project5.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="250"
+									>
+										<span class="proj-card__date">2024 янв — 2025 мар</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project6.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											Реконструкция электросетевого комплекса "Подстанция (ПС)
+											110кВ Западная с линиями электропередачи (ЛЭП)»
+										</h3>
+									</a>
+
+									<a
+										href="project.html"
+										class="proj-card"
+										style="background-image: url('images/project1.jpg')"
+										data-aos="fade-up"
+										data-aos-delay="300"
+									>
+										<span class="proj-card__date">2022 июл — 2023 ноя</span>
+										<h3 class="proj-card__title">
+											«АВР КВЛ 220кВ Бегишево-ТАНЕКО»
+										</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /swiper-wrapper -->
+				</div>
+				<!-- /swiper -->
+
+				<!-- Controls: show more + pagination -->
+				<div class="projects-controls">
+					<div class="projects-controls__main">
+						<div class="projects-controls__line"></div>
+						<button class="btn projects-show-more" id="projects-show-more">
+							Показать еще 7
+							<img
+								src="images/icon-arrow-double-bottom.svg"
+								alt=""
+								width="36"
+								height="36"
+							/>
+						</button>
+						<div class="projects-controls__line"></div>
+					</div>
+					<div class="projects-pagination" id="projects-pagination">
+						<button
+							class="proj-pag-arrow proj-pag-prev"
+							id="proj-pag-prev"
+							aria-label="Назад"
+						>
+							<svg
+								width="12"
+								height="10"
+								viewBox="0 0 12 10"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.430176 8.61432C0.430176 8.61432 4.43018 5.81432 4.43018 4.61432C4.43018 3.41432 0.430175 0.614319 0.430175 0.614319"
+									stroke="#FF4E00"
+									stroke-width="1.5"
+								/>
+								<path
+									d="M6.43018 8.61432C6.43018 8.61432 10.4302 5.81432 10.4302 4.61432C10.4302 3.41432 6.43018 0.614319 6.43018 0.614319"
+									stroke="#FF4E00"
+									stroke-width="1.5"
+								/>
+							</svg>
+						</button>
+						<!-- numbers injected by JS -->
+						<div class="proj-pag-numbers" id="proj-pag-numbers"></div>
+						<button
+							class="proj-pag-arrow proj-pag-next"
+							id="proj-pag-next"
+							aria-label="Вперёд"
+						>
+							<svg
+								width="12"
+								height="10"
+								viewBox="0 0 12 10"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.430176 8.61432C0.430176 8.61432 4.43018 5.81432 4.43018 4.61432C4.43018 3.41432 0.430175 0.614319 0.430175 0.614319"
+									stroke="#FF4E00"
+									stroke-width="1.5"
+								/>
+								<path
+									d="M6.43018 8.61432C6.43018 8.61432 10.4302 5.81432 10.4302 4.61432C10.4302 3.41432 6.43018 0.614319 6.43018 0.614319"
+									stroke="#FF4E00"
+									stroke-width="1.5"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ======================== REQUEST FORM + MAP ======================== -->
+		<section class="request-section">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-12 col-md-6 col-lg-6 col-xl-6"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div
+							class="request-form-wrapper corner-tl-30 corner-br-30"
+							style="height: 100%"
+						>
+							<h3 class="request-title h3">Оставить заявку</h3>
+							<p class="request-subtitle">
+								Проведём консультацию и ответим на все ваши вопросы
+							</p>
+							<form class="request-form">
+								<div class="request-form-row request-form-row--two">
+									<div class="request-field">
+										<input
+											type="text"
+											id="request-name"
+											name="name"
+											placeholder="Ваше имя"
+										/>
+									</div>
+									<div class="request-field">
+										<input
+											type="tel"
+											id="request-phone"
+											name="phone"
+											placeholder="Телефон"
+										/>
+									</div>
+								</div>
+								<div class="request-form-row">
+									<div class="request-field">
+										<textarea
+											id="request-comment"
+											name="comment"
+											rows="4"
+											placeholder="Комментарий"
+										></textarea>
+									</div>
+								</div>
+								<p class="request-policy text-14">
+									Нажимая «Оставить заявку», вы соглашаетесь на обработку
+									<a href="#">персональных данных.</a>
+								</p>
+								<div class="request-form-actions">
+									<button type="submit" class="btn btn-primary">
+										Оставить заявку
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Отправить"
+											width="36"
+											height="36"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div
+						class="col-12 col-md-6 col-lg-6 col-xl-6"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div class="contacts-map-wrap corner-tl-30 corner-br-30">
+							<div id="contacts-yandex-map" class="contacts-yandex-map"></div>
+							<div
+								class="contacts-map-data"
+								id="contacts-map-data"
+								aria-hidden="true"
+							>
+								<div class="contacts-map-data-inner">
+									<p><strong>Телефон</strong><br />+7 925-112-18-81</p>
+									<p><strong>Почта</strong><br />info@skat-rt.ru</p>
+									<p>
+										<strong>Адрес</strong><br />г. Москва, г. Щербинка, ул.
+										Спортивная д.7, офис 108.
+									</p>
+									<p><strong>Режим работы склада</strong><br />09:00-17:00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container container-lg">
+				<div class="row row-center-align">
+					<div class="col-12 col-md-4">
+						<p class="footer-left text-14">© ООО «СКАТ» 2026</p>
+					</div>
+					<div class="col-12 col-md-4">
+						<a href="#" class="footer-center text-14"
+							>Политика конфиденциальности</a
+						>
+					</div>
+					<div class="col-12 col-md-4">
+						<p class="footer-right">
+							<a
+								href="https://markweber.ru"
+								target="_blank"
+								class="footer-right-link text-14"
+							>
+								Разработка сайта — Mark Weber
+								<img
+									src="images/markweb.svg"
+									alt="markweber"
+									width="30"
+									height="45"
+								/>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Lightbox -->
+		<div class="doc-lightbox" id="doc-lightbox" aria-hidden="true">
+			<div class="doc-lightbox__backdrop" id="doc-lightbox-backdrop"></div>
+			<div class="doc-lightbox__content">
+				<button
+					class="doc-lightbox__close"
+					id="doc-lightbox-close"
+					aria-label="Закрыть"
+				>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path
+							d="M18 6L6 18M6 6l12 12"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</button>
+				<img src="" alt="Документ" id="doc-lightbox-img" />
+			</div>
+		</div>
+
+		<script src="js/aos.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/jquery.inputmask.bundle.js"></script>
+		<script src="js/script.js?ver=docs1"></script>
+
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&lang=ru_RU"></script>
+		<script>
+			jQuery(document).ready(function ($) {
+				ymaps.ready(function () {
+					var mapCenter = [55.4997, 37.5597]
+					var map = new ymaps.Map('contacts-yandex-map', {
+						center: mapCenter,
+						zoom: 16,
+						controls: ['zoomControl'],
+					})
+					var pinSvg =
+						'<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M39.9974 6.66699C46.1858 6.66699 52.1207 9.12532 56.4966 13.5012C60.8724 17.877 63.3307 23.8119 63.3307 30.0003C63.3307 37.9403 59.0341 44.3903 54.5874 48.967C52.1314 51.4621 49.4312 53.7044 46.5274 55.6603L45.2841 56.4803L44.1774 57.177L43.6807 57.477L42.8241 57.9703C41.0641 58.9703 38.9307 58.9703 37.1707 57.9703L36.3141 57.4737L35.2807 56.8437L34.7107 56.4803L33.4674 55.6603C30.5636 53.7044 27.8634 51.4621 25.4074 48.967C20.9607 44.3903 16.6641 37.9403 16.6641 30.0003C16.6641 23.8119 19.1224 17.877 23.4982 13.5012C27.8741 9.12532 33.809 6.66699 39.9974 6.66699Z" fill="#FF4E00"/></svg>'
+					var isMobile = window.innerWidth <= 690
+					var placemark = new ymaps.Placemark(
+						mapCenter,
+						{},
+						{
+							iconLayout: 'default#imageWithContent',
+							iconImageHref:
+								'data:image/svg+xml;charset=UTF-8,' +
+								encodeURIComponent(pinSvg),
+							iconImageSize: isMobile ? [50, 50] : [72, 72],
+							iconImageOffset: isMobile ? [-25, -50] : [-16, -40],
+						},
+					)
+					map.geoObjects.add(placemark)
+					map.behaviors.disable('scrollZoom')
+				})
+			})
+		</script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				AOS.init({ once: true, duration: 550, easing: 'ease-out' })
+
+				var currentType = ''
+				var maxVisible = 25
+
+				// ---- Tabs ----
+				var tabs = document.querySelectorAll('.docs-tab')
+				tabs.forEach(function (tab) {
+					tab.addEventListener('click', function () {
+						tabs.forEach(function (t) {
+							t.classList.remove('docs-tab--active')
+						})
+						this.classList.add('docs-tab--active')
+						maxVisible = 25
+						renderCards()
+					})
+				})
+
+				// ---- Dropdown ----
+				var selectWrap = document.getElementById('docs-type-select')
+				var selectToggle = document.getElementById('docs-select-toggle')
+				var selectList = document.getElementById('docs-select-list')
+				var selectLabel = document.getElementById('docs-select-label')
+
+				selectToggle.addEventListener('click', function (e) {
+					e.stopPropagation()
+					var isOpen = selectWrap.classList.toggle('docs-select--open')
+					selectToggle.setAttribute('aria-expanded', isOpen)
+				})
+
+				selectList
+					.querySelectorAll('.docs-select__opt')
+					.forEach(function (opt) {
+						opt.addEventListener('click', function () {
+							selectList
+								.querySelectorAll('.docs-select__opt')
+								.forEach(function (o) {
+									o.classList.remove('docs-select__opt--active')
+								})
+							this.classList.add('docs-select__opt--active')
+							currentType = this.dataset.value
+							selectLabel.textContent = this.textContent
+							selectWrap.classList.remove('docs-select--open')
+							selectToggle.setAttribute('aria-expanded', 'false')
+							maxVisible = 25
+							renderCards()
+						})
+					})
+
+				document.addEventListener('click', function (e) {
+					if (!selectWrap.contains(e.target)) {
+						selectWrap.classList.remove('docs-select--open')
+						selectToggle.setAttribute('aria-expanded', 'false')
+					}
+				})
+
+				// ---- Search ----
+				document
+					.getElementById('docs-search')
+					.addEventListener('input', function () {
+						maxVisible = 25
+						renderCards()
+					})
+
+				// ---- Show more ----
+				document
+					.getElementById('docs-more-btn')
+					.addEventListener('click', function () {
+						maxVisible += 10
+						renderCards()
+					})
+
+				// ---- Render ----
+				function renderCards() {
+					var activeTab =
+						document.querySelector('.docs-tab--active').dataset.cat
+					var searchVal = document
+						.getElementById('docs-search')
+						.value.toLowerCase()
+						.trim()
+					var cards = Array.from(document.querySelectorAll('.doc-card'))
+
+					var visibleCount = 0
+					var totalMatching = 0
+
+					cards.forEach(function (card) {
+						var catMatch = card.dataset.category === activeTab
+						var typeMatch = !currentType || card.dataset.type === currentType
+						var titleMatch =
+							!searchVal ||
+							card.dataset.title.toLowerCase().indexOf(searchVal) !== -1
+						var passes = catMatch && typeMatch && titleMatch
+
+						if (passes) {
+							totalMatching++
+							if (visibleCount < maxVisible) {
+								card.style.display = ''
+								visibleCount++
+							} else {
+								card.style.display = 'none'
+							}
+						} else {
+							card.style.display = 'none'
+						}
+					})
+
+					// No results
+					document.getElementById('docs-no-results').style.display =
+						totalMatching === 0 ? '' : 'none'
+
+					// Show more button
+					document.getElementById('docs-more-wrap').style.display =
+						totalMatching > maxVisible ? '' : 'none'
+				}
+
+				renderCards()
+
+				// ---- Lightbox ----
+				document.querySelectorAll('.doc-card__thumb').forEach(function (btn) {
+					btn.addEventListener('click', function () {
+						var imgSrc = this.dataset.img
+						document.getElementById('doc-lightbox-img').src = imgSrc
+						var lb = document.getElementById('doc-lightbox')
+						lb.classList.add('is-open')
+						lb.setAttribute('aria-hidden', 'false')
+						document.body.style.overflow = 'hidden'
+					})
+				})
+
+				function closeLightbox() {
+					var lb = document.getElementById('doc-lightbox')
+					lb.classList.remove('is-open')
+					lb.setAttribute('aria-hidden', 'true')
+					document.body.style.overflow = ''
+				}
+
+				document
+					.getElementById('doc-lightbox-backdrop')
+					.addEventListener('click', closeLightbox)
+				document
+					.getElementById('doc-lightbox-close')
+					.addEventListener('click', closeLightbox)
+				document.addEventListener('keydown', function (e) {
+					if (e.key === 'Escape') closeLightbox()
+				})
+			})
+		</script>
+	</body>
+</html>

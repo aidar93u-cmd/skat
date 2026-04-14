@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Документация — СКАТ</title>
+		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="styles/aos.css" />
+		<link rel="stylesheet" href="styles/styles.css?ver=docs1" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container container-lg">
+				<div class="row header-row">
+					<!-- Logo -->
+					<div class="col-5 col-md-2 col-lg-2 col-xl-3 header-row__logo">
+						<a href="index.html" class="header-logo">
+							<img
+								src="images/logo-skat.svg"
+								alt="СКАТ"
+								width="131"
+								height="32"
+							/>
+						</a>
+					</div>
+					<!-- Menu (desktop) -->
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6 header-row__nav">
+						<nav class="menu">
+							<a href="#" class="menu-item menu-item-selected">
+								<span class="menu-icon">
+									<img
+										src="images/icon-menu-grid.svg"
+										alt=""
+										width="10"
+										height="10"
+									/>
+								</span>
+								продукция
+							</a>
+							<a href="#" class="menu-item">проекты</a>
+							<a href="#" class="menu-item">о компании</a>
+							<a href="#" class="menu-item">документация</a>
+							<a href="contacts1.html" class="menu-item">Контакты</a>
+						</nav>
+					</div>
+					<!-- Phone, Burger, Button -->
+					<div class="col-7 col-md-10 col-lg-4 col-xl-3 header-row__right">
+						<div class="header-right">
+							<a href="tel:+78002505999" class="phone">8 800 250 59 99</a>
+							<button
+								type="button"
+								class="burger-btn"
+								aria-label="Открыть меню"
+							>
+								<span class="burger-btn__line burger-btn__line--top"></span>
+								<span class="burger-btn__line burger-btn__line--bottom"></span>
+							</button>
+							<button class="btn btn-primary feedback-btn">
+								Оставить заявку
+								<img
+									src="images/icon-arrow-double.svg"
+									alt="Подробнее"
+									width="36"
+									height="36"
+								/>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Мобильное меню (выезжает слева) -->
+			<div
+				class="mobile-menu-overlay"
+				id="mobile-menu-overlay"
+				aria-hidden="true"
+			></div>
+			<div class="mobile-menu-panel" id="mobile-menu-panel" aria-hidden="true">
+				<nav class="menu">
+					<a href="#" class="menu-item menu-item-selected">
+						<span class="menu-icon">
+							<img
+								src="images/icon-menu-grid.svg"
+								alt=""
+								width="10"
+								height="10"
+							/>
+						</span>
+						продукция
+					</a>
+					<a href="#" class="menu-item">проекты</a>
+					<a href="#" class="menu-item">о компании</a>
+					<a href="#" class="menu-item">документация</a>
+					<a href="contacts1.html" class="menu-item">Контакты</a>
+				</nav>
+				<a href="#" class="btn btn-primary feedback-btn">
+					Оставить заявку
+					<img
+						src="images/icon-arrow-double.svg"
+						alt=""
+						width="36"
+						height="36"
+					/>
+				</a>
+			</div>
+		</header>
+
+		<!-- ======================== DOCS PAGE ======================== -->
+		<section class="docs-section">
+			<div class="container container-lg">
+				<!-- Title -->
+				<h1 class="docs-page-title" data-aos="fade-up" data-aos-delay="200">
+					Документация
+				</h1>
+				<div
+					class="line-doc-page-title"
+					data-aos="fade-up"
+					data-aos-delay="400"
+				></div>
+
+				<!-- Filter bar -->
+				<div class="docs-filter" data-aos="fade-up" data-aos-delay="600">
+					<!-- Tabs (40%) -->
+					<div class="docs-filter__tabs">
+						<button class="docs-tab docs-tab--active" data-cat="sip">
+							Арматура для СИП и кабельные муфты
+						</button>
+						<button class="docs-tab" data-cat="highvolt">
+							Высоковольтная кабельная арматура
+						</button>
+					</div>
+
+					<!-- Dropdown (20%) -->
+					<div class="docs-filter__select">
+						<div class="docs-select" id="docs-type-select">
+							<button
+								class="docs-select__toggle"
+								type="button"
+								id="docs-select-toggle"
+								aria-expanded="false"
+							>
+								<span id="docs-select-label">Тип документа</span>
+								<svg
+									class="docs-select__chevron"
+									width="10"
+									height="12"
+									viewBox="0 0 10 12"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8.61426 0.430176C8.61426 0.430176 5.81426 4.43018 4.61426 4.43018C3.41426 4.43018 0.614258 0.430175 0.614258 0.430175"
+										stroke="#FF4E00"
+										stroke-width="1.5"
+									/>
+									<path
+										d="M8.61426 6.43018C8.61426 6.43018 5.81426 10.4302 4.61426 10.4302C3.41426 10.4302 0.614258 6.43018 0.614258 6.43018"
+										stroke="#FF4E00"
+										stroke-width="1.5"
+									/>
+								</svg>
+							</button>
+							<ul
+								class="docs-select__list"
+								id="docs-select-list"
+								role="listbox"
+							>
+								<li
+									class="docs-select__opt docs-select__opt--active"
+									data-value=""
+									role="option"
+								>
+									Все типы
+								</li>
+								<li
+									class="docs-select__opt"
+									data-value="certificate"
+									role="option"
+								>
+									Сертификат
+								</li>
+								<li class="docs-select__opt" data-value="catalog" role="option">
+									Каталог
+								</li>
+								<li
+									class="docs-select__opt"
+									data-value="passport"
+									role="option"
+								>
+									Паспорт изделия
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Search (40%) -->
+					<div class="docs-filter__search">
+						<div class="docs-search">
+							<svg
+								class="docs-search__icon"
+								viewBox="0 0 19 19"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M17.5002 17.5002L13.5191 13.5191M13.5191 13.5191C14.2001 12.8381 14.7403 12.0297 15.1088 11.1399C15.4774 10.2502 15.667 9.29657 15.667 8.33352C15.667 7.37047 15.4774 6.41685 15.1088 5.5271C14.7403 4.63736 14.2001 3.82892 13.5191 3.14794C12.8381 2.46696 12.0297 1.92678 11.1399 1.55823C10.2502 1.18969 9.29657 1 8.33352 1C7.37047 1 6.41685 1.18969 5.5271 1.55823C4.63736 1.92678 3.82892 2.46696 3.14794 3.14794C1.77264 4.52324 1 6.38855 1 8.33352C1 10.2785 1.77264 12.1438 3.14794 13.5191C4.52324 14.8944 6.38855 15.667 8.33352 15.667C10.2785 15.667 12.1438 14.8944 13.5191 13.5191Z"
+									stroke="#FF4E00"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+
+							<input
+								type="text"
+								id="docs-search"
+								class="docs-search__input"
+								placeholder="Введите слово для поиска"
+								autocomplete="off"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Docs grid -->
+				<div class="docs-grid" id="docs-grid">
+					<!-- ---- CARD 1 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 2 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии PE и VE"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Пожарный сертификат соответствия требованиям ГОСТ на профили
+							стеклопластиковые строительные серии «PE» и «VE»
+						</p>
+					</div>
+
+					<!-- ---- CARD 3 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог арматуры для самонесущих изолированных проводов 0.4 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Каталог арматуры для самонесущих изолированных проводов 0,4 кВ
+						</p>
+					</div>
+
+					<!-- ---- CARD 4 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ---- CARD 5 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 6 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии PE и VE"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Пожарный сертификат соответствия требованиям ГОСТ на профили
+							стеклопластиковые строительные серии «PE» и «VE»
+						</p>
+					</div>
+
+					<!-- ---- CARD 7 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог арматуры для самонесущих изолированных проводов 0.4 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Каталог арматуры для самонесущих изолированных проводов 0,4 кВ
+						</p>
+					</div>
+
+					<!-- ---- CARD 8 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 9 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 10 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ---- CARD 11 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 12 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 13 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 14 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 15 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 16 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии PE и VE"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Пожарный сертификат соответствия требованиям ГОСТ на профили
+							стеклопластиковые строительные серии «PE» и «VE»
+						</p>
+					</div>
+
+					<!-- ---- CARD 17 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог арматуры для самонесущих изолированных проводов 0.4 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Каталог арматуры для самонесущих изолированных проводов 0,4 кВ
+						</p>
+					</div>
+
+					<!-- ---- CARD 18 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 19 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 20 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ---- CARD 21 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 22 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 23 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 24 ---- -->
+					<div
+						class="doc-card"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 25 ---- -->
+					<div
+						class="doc-card"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ====== BATCH 2 (hidden initially, show more) ====== -->
+
+					<!-- ---- CARD 26 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="sip"
+						data-type="passport"
+						data-title="Паспорт изделия ответвительный прокалывающий зажим"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Паспорт изделия ответвительный прокалывающий зажим
+						</p>
+					</div>
+
+					<!-- ---- CARD 27 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог арматуры для самонесущих изолированных проводов 0.4 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Каталог арматуры для самонесущих изолированных проводов 0,4 кВ
+						</p>
+					</div>
+
+					<!-- ---- CARD 28 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 29 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="highvolt"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ---- CARD 30 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="sip"
+						data-type="passport"
+						data-title="Паспорт изделия анкерный клиновой зажим"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Паспорт изделия анкерный клиновой зажим
+						</p>
+					</div>
+
+					<!-- ---- CARD 31 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="sip"
+						data-type="certificate"
+						data-title="Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии PE и VE"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Пожарный сертификат соответствия требованиям ГОСТ на профили
+							стеклопластиковые строительные серии «PE» и «VE»
+						</p>
+					</div>
+
+					<!-- ---- CARD 32 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc2.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc2.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+
+					<!-- ---- CARD 33 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="highvolt"
+						data-type="passport"
+						data-title="Паспорт изделия концевая кабельная муфта 35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Паспорт изделия концевая кабельная муфта 35 кВ
+						</p>
+					</div>
+
+					<!-- ---- CARD 34 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="sip"
+						data-type="catalog"
+						data-title="Каталог кабельной арматуры 1-35 кВ"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">Каталог кабельной арматуры 1-35 кВ</p>
+					</div>
+
+					<!-- ---- CARD 35 ---- -->
+					<div
+						class="doc-card doc-card--hidden"
+						data-category="highvolt"
+						data-type="certificate"
+						data-title="Сертификат соответствия требованиям ТУ 2296-006-30372160-2013"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="doc-card__top">
+							<button
+								class="doc-card__thumb"
+								data-img="images/doc1.jpg"
+								aria-label="Просмотреть"
+							>
+								<img
+									src="images/doc1.jpg"
+									width="96"
+									height="140"
+									alt="Документ"
+								/>
+							</button>
+							<div class="doc-card__info">
+								<span class="doc-card__format">PDF,</span>
+								<span class="doc-card__size">5 МБ</span>
+								<a
+									href="#"
+									class="doc-card__download"
+									download
+									aria-label="Скачать"
+								>
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M6 9.066L2.96657 6.03343L3.57343 5.41629L5.57143 7.41429V0H6.42857V7.41429L8.42571 5.41714L9.03343 6.03343L6 9.066ZM0 12V8.53886H0.857143V11.1429H11.1429V8.53886H12V12H0Z"
+											fill="black"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<p class="doc-card__title">
+							Сертификат соответствия требованиям ТУ 2296-006-30372160-2013
+						</p>
+					</div>
+				</div>
+				<!-- /docs-grid -->
+
+				<!-- No results message -->
+				<p class="docs-no-results" id="docs-no-results">Документы не найдены</p>
+
+				<!-- Show more -->
+				<div class="docs-more-wrap" id="docs-more-wrap">
+					<div class="docs-more-inner">
+						<div class="docs-more-line"></div>
+						<button class="btn btn-white docs-more-btn" id="docs-more-btn">
+							Показать еще 10
+							<img
+								src="images/icon-arrow-double-bottom.svg"
+								alt=""
+								width="36"
+								height="36"
+							/>
+						</button>
+						<div class="docs-more-line"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ======================== REQUEST FORM + MAP ======================== -->
+		<section class="request-section">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-12 col-md-6 col-lg-6 col-xl-6"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div
+							class="request-form-wrapper corner-tl-30 corner-br-30"
+							style="height: 100%"
+						>
+							<h3 class="request-title h3">Оставить заявку</h3>
+							<p class="request-subtitle">
+								Проведём консультацию и ответим на все ваши вопросы
+							</p>
+							<form class="request-form">
+								<div class="request-form-row request-form-row--two">
+									<div class="request-field">
+										<input
+											type="text"
+											id="request-name"
+											name="name"
+											placeholder="Ваше имя"
+										/>
+									</div>
+									<div class="request-field">
+										<input
+											type="tel"
+											id="request-phone"
+											name="phone"
+											placeholder="Телефон"
+										/>
+									</div>
+								</div>
+								<div class="request-form-row">
+									<div class="request-field">
+										<textarea
+											id="request-comment"
+											name="comment"
+											rows="4"
+											placeholder="Комментарий"
+										></textarea>
+									</div>
+								</div>
+								<p class="request-policy text-14">
+									Нажимая «Оставить заявку», вы соглашаетесь на обработку
+									<a href="#">персональных данных.</a>
+								</p>
+								<div class="request-form-actions">
+									<button type="submit" class="btn btn-primary">
+										Оставить заявку
+										<img
+											src="images/icon-arrow-double.svg"
+											alt="Отправить"
+											width="36"
+											height="36"
+										/>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div
+						class="col-12 col-md-6 col-lg-6 col-xl-6"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div class="contacts-map-wrap corner-tl-30 corner-br-30">
+							<div id="contacts-yandex-map" class="contacts-yandex-map"></div>
+							<div
+								class="contacts-map-data"
+								id="contacts-map-data"
+								aria-hidden="true"
+							>
+								<div class="contacts-map-data-inner">
+									<p><strong>Телефон</strong><br />+7 925-112-18-81</p>
+									<p><strong>Почта</strong><br />info@skat-rt.ru</p>
+									<p>
+										<strong>Адрес</strong><br />г. Москва, г. Щербинка, ул.
+										Спортивная д.7, офис 108.
+									</p>
+									<p><strong>Режим работы склада</strong><br />09:00-17:00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container container-lg">
+				<div class="row row-center-align">
+					<div class="col-12 col-md-4">
+						<p class="footer-left text-14">© ООО «СКАТ» 2026</p>
+					</div>
+					<div class="col-12 col-md-4">
+						<a href="#" class="footer-center text-14"
+							>Политика конфиденциальности</a
+						>
+					</div>
+					<div class="col-12 col-md-4">
+						<p class="footer-right">
+							<a
+								href="https://markweber.ru"
+								target="_blank"
+								class="footer-right-link text-14"
+							>
+								Разработка сайта — Mark Weber
+								<img
+									src="images/markweb.svg"
+									alt="markweber"
+									width="30"
+									height="45"
+								/>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Lightbox -->
+		<div class="doc-lightbox" id="doc-lightbox" aria-hidden="true">
+			<div class="doc-lightbox__backdrop" id="doc-lightbox-backdrop"></div>
+			<div class="doc-lightbox__content">
+				<button
+					class="doc-lightbox__close"
+					id="doc-lightbox-close"
+					aria-label="Закрыть"
+				>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path
+							d="M18 6L6 18M6 6l12 12"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</button>
+				<img src="" alt="Документ" id="doc-lightbox-img" />
+			</div>
+		</div>
+
+		<script src="js/aos.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/jquery.inputmask.bundle.js"></script>
+		<script src="js/script.js?ver=docs1"></script>
+
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&lang=ru_RU"></script>
+		<script>
+			jQuery(document).ready(function ($) {
+				ymaps.ready(function () {
+					var mapCenter = [55.4997, 37.5597]
+					var map = new ymaps.Map('contacts-yandex-map', {
+						center: mapCenter,
+						zoom: 16,
+						controls: ['zoomControl'],
+					})
+					var pinSvg =
+						'<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M39.9974 6.66699C46.1858 6.66699 52.1207 9.12532 56.4966 13.5012C60.8724 17.877 63.3307 23.8119 63.3307 30.0003C63.3307 37.9403 59.0341 44.3903 54.5874 48.967C52.1314 51.4621 49.4312 53.7044 46.5274 55.6603L45.2841 56.4803L44.1774 57.177L43.6807 57.477L42.8241 57.9703C41.0641 58.9703 38.9307 58.9703 37.1707 57.9703L36.3141 57.4737L35.2807 56.8437L34.7107 56.4803L33.4674 55.6603C30.5636 53.7044 27.8634 51.4621 25.4074 48.967C20.9607 44.3903 16.6641 37.9403 16.6641 30.0003C16.6641 23.8119 19.1224 17.877 23.4982 13.5012C27.8741 9.12532 33.809 6.66699 39.9974 6.66699Z" fill="#FF4E00"/></svg>'
+					var isMobile = window.innerWidth <= 690
+					var placemark = new ymaps.Placemark(
+						mapCenter,
+						{},
+						{
+							iconLayout: 'default#imageWithContent',
+							iconImageHref:
+								'data:image/svg+xml;charset=UTF-8,' +
+								encodeURIComponent(pinSvg),
+							iconImageSize: isMobile ? [50, 50] : [72, 72],
+							iconImageOffset: isMobile ? [-25, -50] : [-16, -40],
+						},
+					)
+					map.geoObjects.add(placemark)
+					map.behaviors.disable('scrollZoom')
+				})
+			})
+		</script>
+	</body>
+</html>
