@@ -4011,7 +4011,18 @@ h4,
 	color: var(--color-gray);
 	background-color: #efefef;
 }
-
+.docs-search__icon-close{	
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	flex-shrink: 0;
+	width: 19px;
+	height: 19px;
+	z-index: 999;
+	stroke: rgb(0 0 0);
+	display: none
+}
 /* --- Показать ещё --- */
 .cat-showmore {
 	display: flex;

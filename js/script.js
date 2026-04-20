@@ -856,7 +856,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		setUI(this.activeIndex)
 	})
 })
-
 document.addEventListener('DOMContentLoaded', function () {
 	var currentType = ''
 	var maxVisible = 15
@@ -870,6 +869,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					t.classList.remove('docs-tab--active')
 				})
 				this.classList.add('docs-tab--active')
+
 				maxVisible = 15
 				renderCards()
 			})
@@ -885,6 +885,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (selectWrap && selectToggle && selectList && selectLabel) {
 		selectToggle.addEventListener('click', function (e) {
 			e.stopPropagation()
+
 			var isOpen = selectWrap.classList.toggle('docs-select--open')
 			selectToggle.setAttribute('aria-expanded', isOpen)
 		})
@@ -894,11 +895,15 @@ document.addEventListener('DOMContentLoaded', function () {
 				selectList.querySelectorAll('.docs-select__opt').forEach(function (o) {
 					o.classList.remove('docs-select__opt--active')
 				})
+
 				this.classList.add('docs-select__opt--active')
+
 				currentType = this.dataset.value
 				selectLabel.textContent = this.textContent
+
 				selectWrap.classList.remove('docs-select--open')
 				selectToggle.setAttribute('aria-expanded', 'false')
+
 				maxVisible = 15
 				renderCards()
 			})
@@ -913,13 +918,55 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// ---- Search ----
+	var searchBox = document.querySelector('.docs-search')
 	var searchInput = document.getElementById('docs-search')
+	var iconSearch = searchBox ? searchBox.querySelector('.docs-search__icon') : null
+	var iconClose = searchBox ? searchBox.querySelector('.docs-search__icon-close') : null
+
+	function updateSearchUI() {
+		if (!searchInput) return
+
+		var hasValue = searchInput.value.trim().length > 0
+
+		if (iconSearch) iconSearch.style.display = hasValue ? 'none' : 'block'
+		if (iconClose) iconClose.style.display = hasValue ? 'block' : 'none'
+	}
+
+	function resetSearch() {
+		if (!searchInput) return
+
+		searchInput.value = ''
+		maxVisible = 15
+		renderCards()
+		updateSearchUI()
+		searchInput.focus()
+	}
+
 	if (searchInput) {
 		searchInput.addEventListener('input', function () {
 			maxVisible = 15
 			renderCards()
+			updateSearchUI()
 		})
 	}
+
+	if (iconClose) {
+		iconClose.addEventListener('click', function (e) {
+			e.preventDefault()
+
+			if (!searchInput.value.trim()) return
+
+			resetSearch()
+		})
+	}
+
+	if (iconSearch) {
+		iconSearch.addEventListener('click', function () {
+			searchInput.focus()
+		})
+	}
+
+	updateSearchUI()
 
 	// ---- Show more ----
 	var moreBtn = document.getElementById('docs-more-btn')
@@ -947,6 +994,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		cards.forEach(function (card) {
 			var catMatch = card.dataset.category === activeTab
 			var typeMatch = !currentType || card.dataset.type === currentType
+
 			var titleMatch =
 				!searchVal ||
 				(card.dataset.title &&
@@ -956,6 +1004,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (passes) {
 				totalMatching++
+
 				if (visibleCount < maxVisible) {
 					card.style.display = ''
 					visibleCount++
@@ -978,11 +1027,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	renderCards();
+	renderCards()
+
 	Fancybox.bind('[data-fancybox]', {})
-
 })
-
 document.addEventListener('DOMContentLoaded', function () {
 	AOS.init({ once: true, duration: 550, easing: 'ease-out' })
 
