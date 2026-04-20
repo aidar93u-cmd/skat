@@ -3102,12 +3102,483 @@ h4,
 }
 
 /* ============================================================
-   СТРАНИЦА КАТАЛОГА (catalog1.html)
+   СТРАНИЦА О КОМПАНИИ (about.html)
    ============================================================ */
 
-/* --- Секция --- */
-.cat-page-section {
-	padding: 0px 0 60px;
+/* --- Секция страницы --- */
+.about-hero-section {
+	padding: 0 0 60px;
+}
+.about-page-section{
+    padding: 0 0 100px;
+
+}
+.about-page-title {
+	font-family: var(--font-actay-wide);
+	color: var(--color-gray);
+	margin: 25px 0 24px;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 105%;
+	text-transform: uppercase;
+}
+
+/* --- Общий заголовок секций --- */
+.about-section-title {
+	text-transform: uppercase;
+	margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* --- 1. Hero --- */
+.about-hero {
+	position: relative;
+	height: 500px;
+	background-image: url('images/about-hero.jpg');
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.about-hero__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.35);
+	z-index: 1;
+}
+
+.about-hero__content {
+	position: absolute;
+	bottom: 40px;
+	left: 35px;
+	right: 35px;
+	z-index: 2;
+}
+
+.about-hero__title {
+	font-size: var(--fs-h1);
+	color: var(--color-white);
+	margin: 0;
+    text-transform: uppercase;
+    max-width: 1200px;
+}
+
+/* --- 2. Текст о компании --- */
+.about-text-block {
+	max-width: 1290px;
+	padding: 0px 0;
+}
+
+.about-text-block__p{
+	margin-bottom: 20px;
+}
+.about-text-block__p p{
+	font-family: var(--font-avenir-next);
+	font-size: 32px;
+	line-height: 125%;
+	color: var(--color-gray);
+}
+
+.about-text-block__p:last-child {
+	margin-bottom: 0;
+}
+
+/* --- 3. Ключевые цифры и факты --- */
+.about-facts {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border: 1px solid #C2C1BF;
+	margin-bottom: 60px;
+}
+
+.about-facts__item {
+	padding: 25px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 33px;
+	border-right: 1px solid #C2C1BF;
+}
+
+.about-facts__item:last-child {
+	border-right: none;
+}
+.about-facts-section{
+	margin-bottom: 100px;
+}
+.about-facts__number {
+    font-family: var(--font-actay-wide);
+    color: var(--color-orange);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.about-facts__label {
+    font-family: var(--font-actay-wide);
+    font-size: var(--fs-22);
+    color: var(--color-gray);
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+/* --- 4. Блоки: картинка + название + текст --- */
+.about-info-block {
+	margin-bottom: 30px;
+}
+
+.about-info-block__image {
+	margin-bottom: 40px;
+	overflow: hidden;
+	max-height: 465px;
+}
+
+.about-info-block__image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+.container-xxl{
+	    max-width: 100%;
+}
+.about-info-block__title {
+	margin-bottom: 25px;
+	text-transform: uppercase;
+}
+.about-info-section{
+	margin-bottom: 70px;
+}
+.about-info-block__text {
+	font-family: var(--font-avenir-next);
+	font-size: 26px;
+	line-height: 125%;
+	color: var(--color-gray);
+}
+.about-advantages-section{
+	margin-bottom: 100px;
+}
+/* --- 5. Преимущества — белая секция с уголками --- */
+.about-advantages {
+	background: var(--color-white);
+	padding: 40px;
+}
+
+.about-advantages__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 60px 92px;
+}
+.about-advantages-text {
+    margin-top: 60px;
+    opacity: 0.7;
+}
+
+.corner-tl-10-white {
+	position: relative;
+	overflow: hidden;
+}
+
+.corner-br-10-white {
+	position: relative;
+	overflow: hidden;
+}
+
+.corner-br-10-white::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: #fff transparent #ffffff transparent;
+	pointer-events: none;
+	z-index: 2;
+}
+.corner-tl-10-white::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 0;
+	border-color: #fff transparent transparent transparent;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.about-advantages__item {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.about-advantages__head {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.about-advantages__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    padding: 15px;
+}
+
+.about-advantages__icon img {
+	width: 30px;
+	height: 30px;
+}
+
+.about-advantages__title {
+    margin: 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    max-width: 274px;
+}
+
+.about-advantages__text {
+    font-family: var(--font-avenir-next);
+    color: var(--color-gray);
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    opacity: 0.7;
+    max-width: 490px;
+}
+
+/* --- 6. Направления деятельности --- */
+.about-activity {
+
+}
+
+.about-activity__image {
+	margin-bottom: 20px;
+	overflow: hidden;
+	height: 445px;
+}
+
+.about-activity__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-activity__title {
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.about-activities-section{
+	margin-bottom: 100px;
+}
+/* --- 7. СМИ о нас --- */
+
+.about-press__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.about-press__nav {
+	display: flex;
+	gap: 10px;
+}
+
+.about-press__btn {
+	width: 90px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border: 1px solid var(--color-gray-30);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	padding: 0;
+}
+
+.about-press__btn:hover {
+	border-color: var(--color-orange);
+}
+.about-press-section{
+	margin-bottom: 60px;
+}
+.about-press__card {
+	background: var(--color-white);
+	padding: 25px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+    min-height: 290px;
+}
+
+.about-press__top {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.about-press__date {
+	color: var(--color-gray-60);
+}
+
+.about-press__card-title {
+    text-transform: uppercase;
+}
+
+.about-press__card-title span{
+	color: #ef4f4f;
+}
+.about-press__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 15px;
+}
+
+.about-press__source {
+    text-transform: uppercase;
+    background: #EFEFEF;
+    padding: 12px 15px;
+    border-radius: 4px;
+}
+
+.about-press__link {
+    color: var(--color-gray);
+    text-decoration: none;
+    transition: 0.4s all;
+    text-transform: uppercase;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    line-height: 10px;
+}
+
+.about-press__link:hover {
+	color: var(--color-orange);
+}
+
+.about-press__link svg path{
+    transition: 0.4s all;
+}
+.about-press__link:hover svg path{
+	stroke: var(--color-orange);
+}
+/* --- Адаптив --- */
+@media (max-width: 1199px) {
+	.about-facts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.about-advantages__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 991px) {
+	.about-hero {
+		height: 400px;
+	}
+
+	.about-hero__title {
+		font-size: 36px;
+	}
+
+	.about-page-title {
+		font-size: 48px;
+	}
+
+	.about-advantages__grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.about-advantages {
+		padding: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.about-hero {
+		height: 350px;
+	}
+
+	.about-hero__content {
+		bottom: 25px;
+		left: 20px;
+		right: 20px;
+	}
+
+	.about-hero__title {
+		font-size: 28px;
+	}
+
+	.about-page-title {
+		font-size: 36px;
+	}
+
+	.about-page-section {
+		padding: 0 0 30px;
+	}
+
+	.about-text-block {
+		padding: 30px 0;
+	}
+
+	.about-section-title {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	.about-facts {
+		grid-template-columns: 1fr;
+		margin-bottom: 30px;
+	}
+
+	.about-facts__item {
+		border-right: none;
+		border-bottom: 1px solid var(--color-gray);
+	}
+
+	.about-facts__item:last-child {
+		border-bottom: none;
+	}
+
+	.about-advantages {
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+
+	.about-advantages__grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.about-press__header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+	}
 }
 
 /* --- Хлебные крошки --- */

@@ -781,9 +781,16 @@ function initRelatedSwiper() {
 		},
 	})
 }
-
 document.addEventListener('DOMContentLoaded', function () {
-	// Init Swiper
+	var prevBtn = document.getElementById('proj-pag-prev')
+	var nextBtn = document.getElementById('proj-pag-next')
+	var showMoreBtn = document.getElementById('projects-show-more')
+	var numbersContainer = document.getElementById('proj-pag-numbers')
+
+	if (!numbersContainer || !prevBtn || !nextBtn || !showMoreBtn) {
+		return
+	}
+
 	var projectsSwiper = new Swiper('.projects-swiper', {
 		slidesPerView: 1,
 		spaceBetween: 0,
@@ -791,59 +798,62 @@ document.addEventListener('DOMContentLoaded', function () {
 		allowTouchMove: false,
 	})
 
-	var totalSlides = projectsSwiper.slides.length
+	function getSlideCount() {
+		return projectsSwiper.slides.length
+	}
 
-	// Build pagination numbers
-	var numbersContainer = document.getElementById('proj-pag-numbers')
+	function setUI(index) {
+		var buttons = numbersContainer.querySelectorAll('.proj-pag-num')
+		var total = getSlideCount()
+
+		buttons.forEach(function (btn, i) {
+			btn.classList.toggle('proj-pag-num--active', i === index)
+		})
+
+		prevBtn.disabled = index <= 0
+		nextBtn.disabled = index >= total - 1
+		showMoreBtn.disabled = index >= total - 1
+	}
+
 	function buildPagination() {
 		numbersContainer.innerHTML = ''
-		for (var i = 0; i < totalSlides; i++) {
+
+		var total = getSlideCount()
+
+		for (var i = 0; i < total; i++) {
 			var btn = document.createElement('button')
-			btn.className = 'proj-pag-num' + (i === 0 ? ' proj-pag-num--active' : '')
+
+			btn.className = 'proj-pag-num'
 			btn.textContent = i + 1
-			btn.setAttribute('data-index', i)
+			btn.dataset.index = i
+
 			btn.addEventListener('click', function () {
-				projectsSwiper.slideTo(parseInt(this.getAttribute('data-index')))
+				var index = Number(this.dataset.index)
+				projectsSwiper.slideTo(index)
 			})
+
 			numbersContainer.appendChild(btn)
 		}
+
+		setUI(0)
 	}
+
 	buildPagination()
 
-	// Update pagination active state
-	function updatePagination(index) {
-		var nums = numbersContainer.querySelectorAll('.proj-pag-num')
-		nums.forEach(function (n, i) {
-			n.classList.toggle('proj-pag-num--active', i === index)
-		})
-		document.getElementById('proj-pag-prev').disabled = index === 0
-		document.getElementById('proj-pag-next').disabled =
-			index === totalSlides - 1
-		document.getElementById('projects-show-more').disabled =
-			index === totalSlides - 1
-	}
-	updatePagination(0)
+	prevBtn.addEventListener('click', function () {
+		projectsSwiper.slidePrev()
+	})
 
-	// Navigation events
-	document
-		.getElementById('proj-pag-prev')
-		.addEventListener('click', function () {
-			projectsSwiper.slidePrev()
-		})
-	document
-		.getElementById('proj-pag-next')
-		.addEventListener('click', function () {
-			projectsSwiper.slideNext()
-		})
-	document
-		.getElementById('projects-show-more')
-		.addEventListener('click', function () {
-			projectsSwiper.slideNext()
-		})
+	nextBtn.addEventListener('click', function () {
+		projectsSwiper.slideNext()
+	})
 
-	// On slide change
+	showMoreBtn.addEventListener('click', function () {
+		projectsSwiper.slideNext()
+	})
+
 	projectsSwiper.on('slideChangeTransitionEnd', function () {
-		updatePagination(this.activeIndex)
+		setUI(this.activeIndex)
 	})
 })
 
