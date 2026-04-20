@@ -863,16 +863,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// ---- Tabs ----
 	var tabs = document.querySelectorAll('.docs-tab')
-	tabs.forEach(function (tab) {
-		tab.addEventListener('click', function () {
-			tabs.forEach(function (t) {
-				t.classList.remove('docs-tab--active')
+	if (tabs.length) {
+		tabs.forEach(function (tab) {
+			tab.addEventListener('click', function () {
+				tabs.forEach(function (t) {
+					t.classList.remove('docs-tab--active')
+				})
+				this.classList.add('docs-tab--active')
+				maxVisible = 15
+				renderCards()
 			})
-			this.classList.add('docs-tab--active')
-			maxVisible = 15
-			renderCards()
 		})
-	})
+	}
 
 	// ---- Dropdown ----
 	var selectWrap = document.getElementById('docs-type-select')
@@ -880,55 +882,63 @@ document.addEventListener('DOMContentLoaded', function () {
 	var selectList = document.getElementById('docs-select-list')
 	var selectLabel = document.getElementById('docs-select-label')
 
-	selectToggle.addEventListener('click', function (e) {
-		e.stopPropagation()
-		var isOpen = selectWrap.classList.toggle('docs-select--open')
-		selectToggle.setAttribute('aria-expanded', isOpen)
-	})
+	if (selectWrap && selectToggle && selectList && selectLabel) {
+		selectToggle.addEventListener('click', function (e) {
+			e.stopPropagation()
+			var isOpen = selectWrap.classList.toggle('docs-select--open')
+			selectToggle.setAttribute('aria-expanded', isOpen)
+		})
 
-	selectList.querySelectorAll('.docs-select__opt').forEach(function (opt) {
-		opt.addEventListener('click', function () {
-			selectList.querySelectorAll('.docs-select__opt').forEach(function (o) {
-				o.classList.remove('docs-select__opt--active')
+		selectList.querySelectorAll('.docs-select__opt').forEach(function (opt) {
+			opt.addEventListener('click', function () {
+				selectList.querySelectorAll('.docs-select__opt').forEach(function (o) {
+					o.classList.remove('docs-select__opt--active')
+				})
+				this.classList.add('docs-select__opt--active')
+				currentType = this.dataset.value
+				selectLabel.textContent = this.textContent
+				selectWrap.classList.remove('docs-select--open')
+				selectToggle.setAttribute('aria-expanded', 'false')
+				maxVisible = 15
+				renderCards()
 			})
-			this.classList.add('docs-select__opt--active')
-			currentType = this.dataset.value
-			selectLabel.textContent = this.textContent
-			selectWrap.classList.remove('docs-select--open')
-			selectToggle.setAttribute('aria-expanded', 'false')
+		})
+
+		document.addEventListener('click', function (e) {
+			if (!selectWrap.contains(e.target)) {
+				selectWrap.classList.remove('docs-select--open')
+				selectToggle.setAttribute('aria-expanded', 'false')
+			}
+		})
+	}
+
+	// ---- Search ----
+	var searchInput = document.getElementById('docs-search')
+	if (searchInput) {
+		searchInput.addEventListener('input', function () {
 			maxVisible = 15
 			renderCards()
 		})
-	})
-
-	document.addEventListener('click', function (e) {
-		if (!selectWrap.contains(e.target)) {
-			selectWrap.classList.remove('docs-select--open')
-			selectToggle.setAttribute('aria-expanded', 'false')
-		}
-	})
-
-	// ---- Search ----
-	document.getElementById('docs-search').addEventListener('input', function () {
-		maxVisible = 15
-		renderCards()
-	})
+	}
 
 	// ---- Show more ----
-	document
-		.getElementById('docs-more-btn')
-		.addEventListener('click', function () {
+	var moreBtn = document.getElementById('docs-more-btn')
+	if (moreBtn) {
+		moreBtn.addEventListener('click', function () {
 			maxVisible += 10
 			renderCards()
 		})
+	}
 
 	// ---- Render ----
 	function renderCards() {
-		var activeTab = document.querySelector('.docs-tab--active').dataset.cat
-		var searchVal = document
-			.getElementById('docs-search')
-			.value.toLowerCase()
-			.trim()
+		var activeTabEl = document.querySelector('.docs-tab--active')
+		if (!activeTabEl) return
+
+		var activeTab = activeTabEl.dataset.cat
+
+		var searchVal = searchInput ? searchInput.value.toLowerCase().trim() : ''
+
 		var cards = Array.from(document.querySelectorAll('.doc-card'))
 
 		var visibleCount = 0
@@ -938,7 +948,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			var catMatch = card.dataset.category === activeTab
 			var typeMatch = !currentType || card.dataset.type === currentType
 			var titleMatch =
-				!searchVal || card.dataset.title.toLowerCase().indexOf(searchVal) !== -1
+				!searchVal ||
+				(card.dataset.title &&
+					card.dataset.title.toLowerCase().indexOf(searchVal) !== -1)
+
 			var passes = catMatch && typeMatch && titleMatch
 
 			if (passes) {
@@ -954,43 +967,90 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 
-		// No results
-		document.getElementById('docs-no-results').style.display =
-			totalMatching === 0 ? '' : 'none'
+		var noResults = document.getElementById('docs-no-results')
+		if (noResults) {
+			noResults.style.display = totalMatching === 0 ? '' : 'none'
+		}
 
-		// Show more button
-		document.getElementById('docs-more-wrap').style.display =
-			totalMatching > maxVisible ? '' : 'none'
+		var moreWrap = document.getElementById('docs-more-wrap')
+		if (moreWrap) {
+			moreWrap.style.display = totalMatching > maxVisible ? '' : 'none'
+		}
 	}
 
-	renderCards()
+	renderCards();
+	Fancybox.bind('[data-fancybox]', {})
 
-	// ---- Lightbox ----
-	document.querySelectorAll('.doc-card__thumb').forEach(function (btn) {
-		btn.addEventListener('click', function () {
-			var imgSrc = this.dataset.img
-			document.getElementById('doc-lightbox-img').src = imgSrc
-			var lb = document.getElementById('doc-lightbox')
-			lb.classList.add('is-open')
-			lb.setAttribute('aria-hidden', 'false')
-			document.body.style.overflow = 'hidden'
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+	AOS.init({ once: true, duration: 550, easing: 'ease-out' })
+
+	// --- Press Swiper ---
+	var pressSwiperEl = document.querySelector('.about-press__swiper')
+	if (pressSwiperEl && typeof Swiper !== 'undefined') {
+		new Swiper('.about-press__swiper', {
+			slidesPerView: 4,
+			spaceBetween: 20,
+			navigation: {
+				prevEl: '.about-press__btn--prev',
+				nextEl: '.about-press__btn--next',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 12,
+				},
+				690: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
 		})
-	})
-
-	function closeLightbox() {
-		var lb = document.getElementById('doc-lightbox')
-		lb.classList.remove('is-open')
-		lb.setAttribute('aria-hidden', 'true')
-		document.body.style.overflow = ''
 	}
+})
 
-	document
-		.getElementById('doc-lightbox-backdrop')
-		.addEventListener('click', closeLightbox)
-	document
-		.getElementById('doc-lightbox-close')
-		.addEventListener('click', closeLightbox)
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Escape') closeLightbox()
-	})
+	
+document.addEventListener('DOMContentLoaded', function () {
+	Fancybox.bind('.fancybox', {})
+	// --- Gallery Swiper ---
+	var gallerySwiperEl = document.querySelector(
+		'.project-detail-gallery__swiper',
+	)
+	if (gallerySwiperEl && typeof Swiper !== 'undefined') {
+		new Swiper('.project-detail-gallery__swiper', {
+			slidesPerView: 2.8,
+			spaceBetween: 12,
+			navigation: {
+				prevEl: '.project-gallery-prev',
+				nextEl: '.project-gallery-next',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.2,
+					spaceBetween: 10,
+				},
+				690: {
+					slidesPerView: 2,
+					spaceBetween: 12,
+				},
+				992: {
+					slidesPerView: 2.5,
+					spaceBetween: 12,
+				},
+				1280: {
+					slidesPerView: 2.8,
+					spaceBetween: 12,
+				},
+			},
+		})
+	}	
 })

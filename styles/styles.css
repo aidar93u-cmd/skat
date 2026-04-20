@@ -6133,3 +6133,217 @@ h4,
 		min-height: auto;
 	}
 }
+
+/* ============================================================
+   СТРАНИЦА ДЕТАЛЬНОГО ПРОЕКТА (project.html)
+   ============================================================ */
+
+/* --- Секция страницы --- */
+.project-hero-section {
+	padding: 0 0 40px;
+}
+
+.project-detail-title { 
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+
+/* --- Banner (hero без текста) --- */
+.project-detail-banner {
+	position: relative;
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.project-detail-banner__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+
+/* --- Информация о проекте --- */
+
+
+/* --- Даты --- */
+.project-detail-dates {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+
+.project-detail-dates__value {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    background: #fff;
+    width: max-content;
+    padding: 11px 15px;
+    border-radius: 4px;
+}
+
+/* --- Контент проекта --- */
+.project-detail-content {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.project-detail-content__title {
+	font-family: var(--font-actay-wide);
+	font-size: var(--fs-h3);
+	line-height: 115%;
+	font-weight: 700;
+	color: var(--color-gray);
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* --- Мета: 3 колонки --- */
+.project-detail-meta {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-detail-meta__item {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.project-detail-meta__label {
+	color: var(--color-gray-60);
+  font-size: 16px;
+}
+
+.project-detail-meta__value {
+	font-weight: 500;
+  font-size: 16px;
+}
+
+/* --- Результат --- */
+.project-detail-result {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.project-detail-result__label {
+	color: var(--color-gray-60);
+}
+
+.project-detail-result__text {
+	font-family: var(--font-avenir-next);
+	font-size: var(--fs-18);
+	line-height: 130%;
+	color: var(--color-gray);
+	margin: 0;
+}
+
+/* --- Галерея слайдер --- */
+.project-detail-gallery {
+	padding: 20px 0 40px;
+}
+
+.project-detail-gallery__item {
+	display: block;
+	overflow: hidden;
+	cursor: zoom-in;
+}
+
+.project-detail-gallery__item img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.project-detail-gallery__item:hover img {
+	transform: scale(1.05);
+}
+
+/* --- Навигация галереи по центру --- */
+.project-detail-gallery__nav {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 1199px) {
+	.project-detail-title {
+		font-size: 48px;
+	}
+
+	.project-detail-meta {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 991px) {
+	.project-detail-banner {
+		height: 400px;
+	}
+
+	.project-detail-title {
+		font-size: 36px;
+	}
+
+	.project-detail-dates__value {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 767px) {
+	.project-detail-section {
+		padding: 0 0 30px;
+	}
+	.project-detail-banner {
+		height: 240px;
+	}
+	.project-detail-gallery__nav{
+		display: none;
+	}
+
+	.project-detail-title {
+		font-size: 24px;
+		margin: 9px 0 0;
+	}
+	.project-detail-gallery {
+		padding: 0px 0 40px;
+	}
+
+	.project-detail-meta {
+		grid-template-columns: 1fr;
+		gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+	}
+	.project-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+	}
+	.project-detail-gallery__item img {
+		height: 200px;
+	}
+	.project-detail-dates__value {
+		font-size: 11px;
+		padding: 11px 15px;
+	}
+}

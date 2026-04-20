@@ -635,42 +635,5 @@
 				})
 			})
 		</script>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				AOS.init({ once: true, duration: 550, easing: 'ease-out' })
-
-				// --- Press Swiper ---
-				var pressSwiperEl = document.querySelector('.about-press__swiper')
-				if (pressSwiperEl && typeof Swiper !== 'undefined') {
-					new Swiper('.about-press__swiper', {
-						slidesPerView: 4,
-						spaceBetween: 20,
-						navigation: {
-							prevEl: '.about-press__btn--prev',
-							nextEl: '.about-press__btn--next',
-						},
-						breakpoints: {
-							0: {
-								slidesPerView: 1,
-								spaceBetween: 12,
-							},
-							690: {
-								slidesPerView: 2,
-								spaceBetween: 16,
-							},
-							992: {
-								slidesPerView: 3,
-								spaceBetween: 20,
-							},
-							1200: {
-								slidesPerView: 4,
-								spaceBetween: 20,
-							},
-						},
-					})
-				}
-			})
-		</script>
 	</body>
 </html>
