@@ -920,8 +920,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	// ---- Search ----
 	var searchBox = document.querySelector('.docs-search')
 	var searchInput = document.getElementById('docs-search')
-	var iconSearch = searchBox ? searchBox.querySelector('.docs-search__icon') : null
-	var iconClose = searchBox ? searchBox.querySelector('.docs-search__icon-close') : null
+	var iconSearch = searchBox
+		? searchBox.querySelector('.docs-search__icon')
+		: null
+	var iconClose = searchBox
+		? searchBox.querySelector('.docs-search__icon-close')
+		: null
 
 	function updateSearchUI() {
 		if (!searchInput) return
@@ -1039,34 +1043,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (pressSwiperEl && typeof Swiper !== 'undefined') {
 		new Swiper('.about-press__swiper', {
 			slidesPerView: 4,
-			spaceBetween: 20,
+			spaceBetween: 12,
 			navigation: {
 				prevEl: '.about-press__btn--prev',
 				nextEl: '.about-press__btn--next',
 			},
 			breakpoints: {
 				0: {
-					slidesPerView: 1,
+					slidesPerView: 1.2,
 					spaceBetween: 12,
 				},
 				690: {
 					slidesPerView: 2,
-					spaceBetween: 16,
+					spaceBetween: 12,
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 12,
 				},
 				1200: {
 					slidesPerView: 4,
-					spaceBetween: 20,
+					spaceBetween: 12,
 				},
 			},
 		})
 	}
 })
 
-	
 document.addEventListener('DOMContentLoaded', function () {
 	Fancybox.bind('.fancybox', {})
 	// --- Gallery Swiper ---
@@ -1095,10 +1098,71 @@ document.addEventListener('DOMContentLoaded', function () {
 					spaceBetween: 12,
 				},
 				1280: {
-					slidesPerView: 2.8,
+					slidesPerView: 3,
 					spaceBetween: 12,
 				},
 			},
 		})
-	}	
+	}
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+	if (typeof Swiper === 'undefined') return
+
+	var MOBILE_BREAKPOINT = 690
+
+	function initAboutSwipers() {
+		if (window.innerWidth >= MOBILE_BREAKPOINT) return
+
+		var aboutAdvantagesSwiper = document.querySelector(
+			'.about-advantages-swiper',
+		)
+		if (aboutAdvantagesSwiper && !aboutAdvantagesSwiper.swiper) {
+			aboutAdvantagesSwiper.swiper = new Swiper('.about-advantages-swiper', {
+				slidesPerView: 1.3,
+				spaceBetween: 45,
+				loop: false,
+			})
+		}
+
+		var aboutActivitiesSwiper = document.querySelector(
+			'.about-activities-swiper',
+		)
+		if (aboutActivitiesSwiper && !aboutActivitiesSwiper.swiper) {
+			aboutActivitiesSwiper.swiper = new Swiper('.about-activities-swiper', {
+				slidesPerView: 1.2,
+				spaceBetween: 15,
+				loop: false,
+			})
+		}
+	}
+
+	function destroyAboutSwipers() {
+		var aboutAdvantagesSwiper = document.querySelector(
+			'.about-advantages-swiper',
+		)
+		if (aboutAdvantagesSwiper && aboutAdvantagesSwiper.swiper) {
+			aboutAdvantagesSwiper.swiper.destroy(true, true)
+			aboutAdvantagesSwiper.swiper = null
+		}
+
+		var aboutActivitiesSwiper = document.querySelector(
+			'.about-activities-swiper',
+		)
+		if (aboutActivitiesSwiper && aboutActivitiesSwiper.swiper) {
+			aboutActivitiesSwiper.swiper.destroy(true, true)
+			aboutActivitiesSwiper.swiper = null
+		}
+	}
+
+	function updateAboutSwipers() {
+		if (window.innerWidth < MOBILE_BREAKPOINT) {
+			initAboutSwipers()
+		} else {
+			destroyAboutSwipers()
+		}
+	}
+
+	initAboutSwipers()
+	window.addEventListener('resize', updateAboutSwipers)
 })
