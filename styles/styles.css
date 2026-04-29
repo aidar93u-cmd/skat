@@ -3587,11 +3587,12 @@ h4,
 }
 
 .about-facts__item {
-	padding: 25px 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 33px;
-	border-right: 1px solid #c2c1bf;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    border-right: 1px solid #c2c1bf;
+    justify-content: space-between;
 }
 
 .about-facts__item:last-child {
@@ -3613,13 +3614,9 @@ h4,
 }
 
 .about-facts__label {
-	font-family: var(--font-actay-wide);
-	font-size: var(--fs-22);
 	color: var(--color-gray);
-	font-weight: 700;
 	line-height: 115%;
-	letter-spacing: -1px;
-	text-transform: uppercase;
+	opacity:0.7
 }
 
 /* --- 4. Блоки: картинка + название + текст --- */
