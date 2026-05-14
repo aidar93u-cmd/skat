@@ -6229,14 +6229,14 @@ h4,
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--gap);
-	height: 984px;
-	max-height: 984px;
+	height: 652px;
+	max-height: 652px;
 }
 
 .projects-grid__right {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	gap: var(--gap);
 	height: 100%;
 }
@@ -6464,7 +6464,7 @@ h4,
 
 	.projects-grid__right {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(3, 230px);
+		grid-template-rows: repeat(2, 230px);
 		height: auto;
 	}
 
