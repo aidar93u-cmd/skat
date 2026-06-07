@@ -8,6 +8,10 @@ graphify-out/
 # codegraph tool data
 .codegraph/
 
+# opencode config
+AGENTS.md
+opencode.json
+
 # OS files
 Thumbs.db
 .DS_Store
