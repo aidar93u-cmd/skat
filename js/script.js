@@ -8,6 +8,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 	initFeedbackButton()
 	initCatalogSwiper()
+	initCatalogSwiper2()
 	initCompanySlider()
 	initBurgerMenu()
 	initAdvantagesSwiper()
@@ -46,13 +47,17 @@ function initCatalogSwiper() {
 
 	new Swiper('.catalog-swiper', {
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 8,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		breakpoints: {
+			168: {
+				slidesPerView: 1.3,
+				spaceBetween: 6,
+			},
 			768: {
 				slidesPerView: 2,
 			},
@@ -63,6 +68,39 @@ function initCatalogSwiper() {
 	})
 }
 
+function initCatalogSwiper2() {
+	if (typeof Swiper === 'undefined') {
+		return
+	}
+
+	const catalogSwiperEl = document.querySelector('.catalog-swiper2')
+
+	if (!catalogSwiperEl) {
+		return
+	}
+
+	new Swiper('.catalog-swiper2', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			168: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			1224: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
 /**
  * Initialize simple company slider
  */
@@ -212,6 +250,20 @@ function initAdvantagesSwiper() {
 			slidesPerView: 1.3,
 			spaceBetween: 45,
 			loop: true,
+
+			breakpoints: {
+				168: {
+					slidesPerView: 1.3,
+					spaceBetween: 6,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				1224: {
+					slidesPerView: 1.3,
+					spaceBetween: 45,
+				},
+			},
 		})
 	}
 

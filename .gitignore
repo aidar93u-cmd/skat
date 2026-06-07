@@ -1,0 +1,13 @@
+# graphify temp files
+tmp_*
+.graphify_*
+
+# graphify output
+graphify-out/
+
+# codegraph tool data
+.codegraph/
+
+# OS files
+Thumbs.db
+.DS_Store
