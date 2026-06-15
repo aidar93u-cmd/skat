@@ -1053,16 +1053,15 @@ h4,
 }
 
 .catalog-card {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	padding: 40px;
-	background-color: var(--color-white);
-	height: 100%;
-	text-decoration: none;
-	transition: all 0.4s;
-	min-height: 165px;
-	align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    background-color: var(--color-white);
+    height: 100%;
+    text-decoration: none;
+    transition: all 0.4s;
+    min-height: 165px;
+    align-items: center;
 }
 .catalog-section2 .catalog-card {
 	background-color: var(--color-white);
@@ -1304,6 +1303,15 @@ h4,
 			rgba(0, 0, 0, 0.38) 5.99%,
 			rgba(0, 0, 0, 0) 58.36%
 		);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.company-slider-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36)),
+		linear-gradient(291.8deg, rgba(0, 0, 0, 0.38) 5.99%, rgba(0, 0, 0, 0) 58.36%);
 	z-index: 0;
 	pointer-events: none;
 }
@@ -7440,6 +7448,9 @@ h4,
 	}
 	.hero-content-top-left {
 		max-width: 580px;
+	}
+	.shildick-text{
+		font-size: 10px;
 	}
 }
 
