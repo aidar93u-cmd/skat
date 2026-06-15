@@ -64,6 +64,12 @@
 
 @font-face {
 	font-family: 'Avenir Next';
+	src: url('../fonts/AvenirNextCyr-Regular.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Avenir Next';
 	src: url('../fonts/AvenirNextCyr-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
@@ -1458,6 +1464,7 @@ h4,
 	font-size: var(--fs-18);
 	line-height: 1.4;
 	margin: 0;
+	font-weight: 300;
 }
 
 .company-slide-btn {
@@ -1479,7 +1486,6 @@ h4,
 }
 
 .request-subtitle {
-	margin: 0 0 108px;
 	max-width: 320px;
 }
 
@@ -1531,8 +1537,8 @@ h4,
 
 .request-field textarea {
 	resize: vertical;
-	min-height: 211px;
-	height: 211px;
+	min-height: 180px;
+	height: 180px;
 }
 
 .request-policy {
@@ -2136,7 +2142,6 @@ h4,
 	}
 
 	.request-subtitle {
-		margin: 0 0 88px;
 	}
 
 	.request-form-actions {
@@ -2326,7 +2331,6 @@ h4,
 	}
 
 	.request-subtitle {
-		margin: 0 0 72px;
 	}
 
 	.request-form-actions {
@@ -2614,7 +2618,6 @@ h4,
 	}
 
 	.request-subtitle {
-		margin: 0 0 56px;
 	}
 
 	.request-form-actions {
