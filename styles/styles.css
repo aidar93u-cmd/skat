@@ -991,18 +991,23 @@ h4,
 	gap: 5rem;
 }
 .catalog-title {
-	font-family: var(--font-actay-wide);
-	font-size: 28px;
-	line-height: 115%;
-	font-weight: 700;
-	color: var(--color-gray);
-	text-decoration: underline;
-	text-underline-offset: 6px;
-	text-decoration-color: var(--color-gray);
-	margin: 0;
-	text-transform: uppercase;
-	max-width: 200px;
-	letter-spacing: -0.05rem;
+    font-family: var(--font-actay-wide);
+    font-size: 28px;
+    line-height: 130%;
+    font-weight: 700;
+    color: var(--color-gray);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-gray);
+    margin: 0;
+    text-transform: uppercase;
+    max-width: 200px;
+    letter-spacing: -0.05rem;
+}
+
+.catalog-title a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
 .catalog-nav {
